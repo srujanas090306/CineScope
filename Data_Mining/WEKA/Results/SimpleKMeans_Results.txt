@@ -1,0 +1,107 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     cinescope_movie_ratings-weka.filters.supervised.instance.Resample-B0.0-S1-Z5.0-no-replacement
+Instances:    4999
+Attributes:   24
+              age
+              gender
+              occupation
+              release_year
+              unknown
+              Action
+              Adventure
+              Animation
+              Children
+              Comedy
+              Crime
+              Documentary
+              Drama
+              Fantasy
+              Film-Noir
+              Horror
+              Musical
+              Mystery
+              Romance
+              Sci-Fi
+              Thriller
+              War
+              Western
+Ignored:
+              rating_class
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 13
+Within cluster sum of squared errors: 11765.048658141355
+
+Initial starting points (random):
+
+Cluster 0: 28,M,librarian,1991,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Cluster 1: 40,M,librarian,1997,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0
+Cluster 2: 41,F,healthcare,1994,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                            Cluster#
+Attribute        Full Data         0         1         2
+                  (4999.0)  (2819.0)   (962.0)  (1218.0)
+========================================================
+age                 32.978   31.6563   39.0728   31.2233
+gender                   M         M         M         M
+occupation         student   student  educator   student
+release_year     1988.1568 1987.3824 1986.6393 1991.1478
+unknown             0.0002    0.0004         0         0
+Action              0.2555    0.0163    0.0582    0.9647
+Adventure           0.1348    0.0465     0.026    0.4253
+Animation           0.0368    0.0578    0.0104     0.009
+Children            0.0718    0.1114     0.027    0.0156
+Comedy              0.3117    0.3565    0.4272    0.1166
+Crime                0.078    0.0972    0.0499    0.0558
+Documentary         0.0036    0.0064         0         0
+Drama               0.3899    0.4764    0.5031    0.1002
+Fantasy             0.0124    0.0135    0.0094    0.0123
+Film-Noir           0.0182    0.0277    0.0135         0
+Horror              0.0556     0.066    0.0229    0.0575
+Musical             0.0516    0.0568    0.0769    0.0197
+Mystery             0.0498    0.0628    0.0281    0.0369
+Romance              0.204    0.0571    0.7017    0.1511
+Sci-Fi              0.1286    0.0596    0.0239    0.3711
+Thriller            0.2208    0.1625    0.1019    0.4499
+War                 0.0882    0.0571    0.0967    0.1535
+Western              0.018    0.0163    0.0083    0.0296
+
+
+
+
+Time taken to build model (full training data) : 0.14 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      2819 ( 56%)
+1       962 ( 19%)
+2      1218 ( 24%)
+
+
+Class attribute: rating_class
+Classes to Clusters:
+
+    0    1    2  <-- assigned to cluster
+  493  152  229 | Low
+  745  245  367 | Medium
+ 1581  565  622 | High
+
+Cluster 0 <-- High
+Cluster 1 <-- Low
+Cluster 2 <-- Medium
+
+Incorrectly clustered instances :	2899.0	 57.9916 %
+

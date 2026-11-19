@@ -1,0 +1,894 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     cinescope_movie_ratings-weka.filters.supervised.instance.Resample-B0.0-S1-Z5.0-no-replacement
+Instances:    4999
+Attributes:   24
+              age
+              gender
+              occupation
+              release_year
+              unknown
+              Action
+              Adventure
+              Animation
+              Children
+              Comedy
+              Crime
+              Documentary
+              Drama
+              Fantasy
+              Film-Noir
+              Horror
+              Musical
+              Mystery
+              Romance
+              Sci-Fi
+              Thriller
+              War
+              Western
+              rating_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+release_year <= 1991: High (1675.0/555.0)
+release_year > 1991
+|   Horror <= 0
+|   |   Drama <= 0
+|   |   |   Animation <= 0
+|   |   |   |   Romance <= 0
+|   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   Western <= 0
+|   |   |   |   |   |   |   occupation = administrator
+|   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   Action <= 0: High (17.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   Action > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   Thriller <= 0: High (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Thriller > 0: Low (2.0)
+|   |   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1994: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   release_year > 1994: Medium (22.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   Action > 0: High (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 34: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 34: Medium (8.0)
+|   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   Children > 0
+|   |   |   |   |   |   |   |   |   Fantasy <= 0: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Fantasy > 0: Medium (2.0)
+|   |   |   |   |   |   |   occupation = artist
+|   |   |   |   |   |   |   |   Comedy <= 0: High (15.0/5.0)
+|   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   age <= 28: High (2.0)
+|   |   |   |   |   |   |   |   |   |   age > 28: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   release_year > 1996: Low (2.0)
+|   |   |   |   |   |   |   occupation = doctor
+|   |   |   |   |   |   |   |   age <= 35: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   age > 35: High (4.0)
+|   |   |   |   |   |   |   occupation = educator
+|   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   gender = F: Low (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = M: High (20.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1996: Low (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: Low (4.0)
+|   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1992: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1992
+|   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0: Medium (19.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Comedy <= 0: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Comedy > 0: High (2.0)
+|   |   |   |   |   |   |   |   |   |   War > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 38: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 38: Medium (2.0)
+|   |   |   |   |   |   |   |   Mystery > 0: High (4.0/1.0)
+|   |   |   |   |   |   |   occupation = engineer
+|   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   release_year <= 1992: High (3.0)
+|   |   |   |   |   |   |   |   |   release_year > 1992
+|   |   |   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 54
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Musical <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 28: Low (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 28: Medium (12.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 30: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 30
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 39: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 39: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1996: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Musical > 0: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 54: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 23: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 23: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 25: High (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   War > 0: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Mystery > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   Children > 0
+|   |   |   |   |   |   |   |   |   age <= 31: Medium (2.0)
+|   |   |   |   |   |   |   |   |   age > 31: Low (2.0)
+|   |   |   |   |   |   |   occupation = entertainment
+|   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   age <= 35
+|   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: High (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Action > 0: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Children > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0: High (3.0)
+|   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 23: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 23: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 35: Medium (2.0)
+|   |   |   |   |   |   |   |   Mystery > 0: High (3.0)
+|   |   |   |   |   |   |   occupation = executive
+|   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   age <= 46: Low (29.0/10.0)
+|   |   |   |   |   |   |   |   |   age > 46: High (2.0)
+|   |   |   |   |   |   |   |   Mystery > 0
+|   |   |   |   |   |   |   |   |   age <= 37: Medium (2.0)
+|   |   |   |   |   |   |   |   |   age > 37: High (2.0)
+|   |   |   |   |   |   |   occupation = healthcare
+|   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   release_year <= 1996: Low (28.0/11.0)
+|   |   |   |   |   |   |   |   |   release_year > 1996: Medium (8.0/2.0)
+|   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   Adventure <= 0: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Adventure > 0: High (2.0)
+|   |   |   |   |   |   |   |   gender = Unknown: Low (0.0)
+|   |   |   |   |   |   |   occupation = homemaker
+|   |   |   |   |   |   |   |   Comedy <= 0: High (5.0/1.0)
+|   |   |   |   |   |   |   |   Comedy > 0: Low (3.0)
+|   |   |   |   |   |   |   occupation = lawyer
+|   |   |   |   |   |   |   |   Comedy <= 0: Medium (2.0)
+|   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   age <= 28: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   age > 28
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1995: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1995: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Action > 0: High (2.0)
+|   |   |   |   |   |   |   occupation = librarian
+|   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995: High (10.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   Action > 0: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   gender = M: High (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   |   Thriller > 0: Medium (14.0/6.0)
+|   |   |   |   |   |   |   |   Children > 0: Low (2.0/1.0)
+|   |   |   |   |   |   |   occupation = marketing
+|   |   |   |   |   |   |   |   release_year <= 1996: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   release_year > 1996: High (4.0/1.0)
+|   |   |   |   |   |   |   occupation = none: High (18.0/6.0)
+|   |   |   |   |   |   |   occupation = other
+|   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   |   age <= 39
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1993
+|   |   |   |   |   |   |   |   |   |   |   |   gender = F: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = M: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = Unknown: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1993
+|   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995: Medium (27.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1996: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Mystery <= 0: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Mystery > 0: High (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 18: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 18: High (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action > 0: Medium (17.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 25: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 25: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1996: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 28: High (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 28: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   age > 39
+|   |   |   |   |   |   |   |   |   |   |   gender = F: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: Medium (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Action > 0: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   |   War > 0
+|   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: High (4.0)
+|   |   |   |   |   |   |   |   Children > 0
+|   |   |   |   |   |   |   |   |   gender = F: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   gender = M: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   occupation = programmer
+|   |   |   |   |   |   |   |   Musical <= 0
+|   |   |   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   |   |   release_year <= 1993: High (5.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1993
+|   |   |   |   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action > 0: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995: Medium (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 30: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 30: High (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 28: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 28: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Children > 0: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0: High (33.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Action > 0: Low (3.0)
+|   |   |   |   |   |   |   |   Musical > 0
+|   |   |   |   |   |   |   |   |   release_year <= 1995: Low (2.0)
+|   |   |   |   |   |   |   |   |   release_year > 1995: Medium (2.0)
+|   |   |   |   |   |   |   occupation = retired
+|   |   |   |   |   |   |   |   age <= 58: High (2.0)
+|   |   |   |   |   |   |   |   age > 58
+|   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (5.0)
+|   |   |   |   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   |   |   |   release_year <= 1996: Low (10.0/5.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1996: Medium (3.0/1.0)
+|   |   |   |   |   |   |   occupation = salesman
+|   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   Comedy <= 0: High (3.0)
+|   |   |   |   |   |   |   |   |   Comedy > 0: Low (8.0/3.0)
+|   |   |   |   |   |   |   |   Action > 0: Medium (3.0/1.0)
+|   |   |   |   |   |   |   occupation = scientist
+|   |   |   |   |   |   |   |   release_year <= 1996: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   |   age <= 41: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   age > 41: High (3.0)
+|   |   |   |   |   |   |   occupation = student
+|   |   |   |   |   |   |   |   gender = F: High (88.0/42.0)
+|   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 18
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 14: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 14: Low (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 18
+|   |   |   |   |   |   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1994
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 23: Medium (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 23: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1994: High (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   War > 0: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Mystery > 0: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 31
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 21: Medium (18.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 21: Low (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 31: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Children <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 19: High (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 19: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 26: Medium (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 26: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 28: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 33: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 23: High (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 23
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 27: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 27: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Children > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 24: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 24: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 25
+|   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1994: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1994: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Action > 0: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1995: Low (15.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 25: Low (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1996: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   |   |   Fantasy <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Action <= 0: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1994: High (19.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 21: High (13.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 21: Medium (12.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   Fantasy > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Mystery > 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1995: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1995: Medium (4.0)
+|   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   occupation = technician
+|   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   age <= 34
+|   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 25: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 25: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1995: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1993: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   release_year > 1993: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Adventure > 0: High (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 25: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 25: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 34: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   War > 0: Low (3.0/1.0)
+|   |   |   |   |   |   |   occupation = writer
+|   |   |   |   |   |   |   |   age <= 35
+|   |   |   |   |   |   |   |   |   age <= 19: High (3.0)
+|   |   |   |   |   |   |   |   |   age > 19: Low (33.0/14.0)
+|   |   |   |   |   |   |   |   age > 35: High (18.0/4.0)
+|   |   |   |   |   |   Western > 0
+|   |   |   |   |   |   |   release_year <= 1994: High (25.0/10.0)
+|   |   |   |   |   |   |   release_year > 1994: Low (2.0/1.0)
+|   |   |   |   |   Crime > 0: High (152.0/66.0)
+|   |   |   |   Romance > 0
+|   |   |   |   |   War <= 0
+|   |   |   |   |   |   occupation = administrator: High (32.0/12.0)
+|   |   |   |   |   |   occupation = artist
+|   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   age <= 25: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   age > 25: High (2.0)
+|   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   release_year <= 1994: High (4.0/2.0)
+|   |   |   |   |   |   |   |   release_year > 1994: Medium (4.0/1.0)
+|   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   occupation = doctor: Medium (2.0/1.0)
+|   |   |   |   |   |   occupation = educator
+|   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   release_year <= 1993: High (5.0)
+|   |   |   |   |   |   |   |   release_year > 1993
+|   |   |   |   |   |   |   |   |   age <= 34: High (5.0)
+|   |   |   |   |   |   |   |   |   age > 34
+|   |   |   |   |   |   |   |   |   |   gender = F: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1994: High (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   gender = Unknown: Medium (0.0)
+|   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   Action <= 0: Low (5.0)
+|   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   age <= 33: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 33: High (3.0)
+|   |   |   |   |   |   occupation = engineer
+|   |   |   |   |   |   |   Comedy <= 0: Low (4.0/1.0)
+|   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   release_year <= 1994: High (9.0/1.0)
+|   |   |   |   |   |   |   |   |   release_year > 1994: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   release_year > 1995
+|   |   |   |   |   |   |   |   |   release_year <= 1996: Medium (2.0)
+|   |   |   |   |   |   |   |   |   release_year > 1996: Low (4.0/1.0)
+|   |   |   |   |   |   occupation = entertainment
+|   |   |   |   |   |   |   release_year <= 1995: Medium (3.0)
+|   |   |   |   |   |   |   release_year > 1995: Low (2.0/1.0)
+|   |   |   |   |   |   occupation = executive
+|   |   |   |   |   |   |   Action <= 0: Low (4.0/2.0)
+|   |   |   |   |   |   |   Action > 0: High (5.0/1.0)
+|   |   |   |   |   |   occupation = healthcare
+|   |   |   |   |   |   |   release_year <= 1994: Low (3.0)
+|   |   |   |   |   |   |   release_year > 1994: Medium (3.0/1.0)
+|   |   |   |   |   |   occupation = homemaker: Low (2.0/1.0)
+|   |   |   |   |   |   occupation = lawyer: High (6.0/1.0)
+|   |   |   |   |   |   occupation = librarian
+|   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   release_year <= 1995: Medium (10.0/2.0)
+|   |   |   |   |   |   |   |   release_year > 1995: Low (2.0/1.0)
+|   |   |   |   |   |   |   gender = M: Low (2.0/1.0)
+|   |   |   |   |   |   |   gender = Unknown: Medium (0.0)
+|   |   |   |   |   |   occupation = marketing
+|   |   |   |   |   |   |   gender = F: Low (2.0)
+|   |   |   |   |   |   |   gender = M: Medium (6.0/2.0)
+|   |   |   |   |   |   |   gender = Unknown: Low (0.0)
+|   |   |   |   |   |   occupation = none: High (3.0)
+|   |   |   |   |   |   occupation = other
+|   |   |   |   |   |   |   Adventure <= 0
+|   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   |   age <= 26: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   age > 26
+|   |   |   |   |   |   |   |   |   |   |   age <= 33: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 33: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 23: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 23: High (13.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Action > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 27: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 27: High (2.0)
+|   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   Mystery > 0: High (2.0)
+|   |   |   |   |   |   |   Adventure > 0: High (2.0)
+|   |   |   |   |   |   occupation = programmer
+|   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   age <= 28: High (4.0/1.0)
+|   |   |   |   |   |   |   |   age > 28: Low (2.0/1.0)
+|   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   release_year <= 1995: High (16.0/4.0)
+|   |   |   |   |   |   |   |   release_year > 1995: Medium (5.0)
+|   |   |   |   |   |   occupation = retired: High (9.0/4.0)
+|   |   |   |   |   |   occupation = salesman: High (0.0)
+|   |   |   |   |   |   occupation = scientist
+|   |   |   |   |   |   |   age <= 30: Medium (3.0/1.0)
+|   |   |   |   |   |   |   age > 30: High (3.0)
+|   |   |   |   |   |   occupation = student
+|   |   |   |   |   |   |   Fantasy <= 0
+|   |   |   |   |   |   |   |   release_year <= 1994: High (42.0/14.0)
+|   |   |   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 28: High (31.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 28: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 24: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 24: Low (2.0)
+|   |   |   |   |   |   |   |   |   Mystery > 0: High (3.0)
+|   |   |   |   |   |   |   Fantasy > 0: Medium (5.0/2.0)
+|   |   |   |   |   |   occupation = technician
+|   |   |   |   |   |   |   age <= 25: High (4.0/1.0)
+|   |   |   |   |   |   |   age > 25
+|   |   |   |   |   |   |   |   age <= 30: Medium (4.0)
+|   |   |   |   |   |   |   |   age > 30: High (2.0)
+|   |   |   |   |   |   occupation = writer
+|   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   release_year <= 1995: Medium (3.0)
+|   |   |   |   |   |   |   |   release_year > 1995: High (7.0/2.0)
+|   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   release_year <= 1996: High (6.0/2.0)
+|   |   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   |   age <= 49: Low (3.0)
+|   |   |   |   |   |   |   |   |   age > 49: Medium (3.0/1.0)
+|   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   War > 0: High (41.0/10.0)
+|   |   |   Animation > 0
+|   |   |   |   release_year <= 1993: High (19.0/1.0)
+|   |   |   |   release_year > 1993
+|   |   |   |   |   Musical <= 0
+|   |   |   |   |   |   Adventure <= 0: High (48.0/14.0)
+|   |   |   |   |   |   Adventure > 0
+|   |   |   |   |   |   |   age <= 22: Medium (3.0/1.0)
+|   |   |   |   |   |   |   age > 22: Low (3.0/1.0)
+|   |   |   |   |   Musical > 0
+|   |   |   |   |   |   occupation = administrator: High (3.0/1.0)
+|   |   |   |   |   |   occupation = artist: Low (1.0)
+|   |   |   |   |   |   occupation = doctor: Medium (0.0)
+|   |   |   |   |   |   occupation = educator: Medium (1.0)
+|   |   |   |   |   |   occupation = engineer: Medium (3.0)
+|   |   |   |   |   |   occupation = entertainment: Medium (0.0)
+|   |   |   |   |   |   occupation = executive: Medium (0.0)
+|   |   |   |   |   |   occupation = healthcare: Low (2.0/1.0)
+|   |   |   |   |   |   occupation = homemaker: Medium (0.0)
+|   |   |   |   |   |   occupation = lawyer: Medium (0.0)
+|   |   |   |   |   |   occupation = librarian: High (1.0)
+|   |   |   |   |   |   occupation = marketing: Low (4.0/2.0)
+|   |   |   |   |   |   occupation = none: Medium (0.0)
+|   |   |   |   |   |   occupation = other
+|   |   |   |   |   |   |   gender = F: High (2.0)
+|   |   |   |   |   |   |   gender = M: Medium (3.0/1.0)
+|   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   occupation = programmer: Medium (1.0)
+|   |   |   |   |   |   occupation = retired: Medium (0.0)
+|   |   |   |   |   |   occupation = salesman: Medium (0.0)
+|   |   |   |   |   |   occupation = scientist: Medium (0.0)
+|   |   |   |   |   |   occupation = student: Low (5.0/1.0)
+|   |   |   |   |   |   occupation = technician: High (3.0/1.0)
+|   |   |   |   |   |   occupation = writer: Medium (5.0/2.0)
+|   |   Drama > 0
+|   |   |   Children <= 0
+|   |   |   |   occupation = administrator
+|   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   |   |   Action <= 0: High (24.0/7.0)
+|   |   |   |   |   |   |   |   |   |   Action > 0: Medium (2.0)
+|   |   |   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   |   |   age <= 40
+|   |   |   |   |   |   |   |   |   |   |   age <= 32: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 32: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   age > 40: High (6.0)
+|   |   |   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1993: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1993
+|   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1994: High (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   release_year > 1994: Medium (14.0/6.0)
+|   |   |   |   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 49: High (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 49: Medium (3.0)
+|   |   |   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   |   |   age <= 37: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   age > 37: Medium (2.0)
+|   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   Sci-Fi > 0: High (6.0/1.0)
+|   |   |   |   |   |   War > 0
+|   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   age <= 32: Medium (2.0)
+|   |   |   |   |   |   |   |   age > 32: High (5.0/1.0)
+|   |   |   |   |   |   |   gender = M: High (7.0)
+|   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   Mystery > 0: High (4.0)
+|   |   |   |   occupation = artist: High (30.0/9.0)
+|   |   |   |   occupation = doctor
+|   |   |   |   |   Crime <= 0: High (10.0/3.0)
+|   |   |   |   |   Crime > 0: Medium (2.0)
+|   |   |   |   occupation = educator: High (130.0/50.0)
+|   |   |   |   occupation = engineer
+|   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   age <= 54
+|   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1993: Medium (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1993
+|   |   |   |   |   |   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 25: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 33: High (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 40: Medium (10.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 40: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sci-Fi > 0: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Comedy > 0: High (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 27: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 27: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   release_year > 1995
+|   |   |   |   |   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 36: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 36: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   release_year > 1996: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Action > 0: High (4.0/1.0)
+|   |   |   |   |   |   |   |   War > 0: High (6.0/1.0)
+|   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   War <= 0: High (15.0/2.0)
+|   |   |   |   |   |   |   |   War > 0: Low (2.0)
+|   |   |   |   |   |   age > 54: Medium (4.0)
+|   |   |   |   |   Crime > 0: High (9.0/1.0)
+|   |   |   |   occupation = entertainment
+|   |   |   |   |   War <= 0
+|   |   |   |   |   |   gender = F: Medium (2.0)
+|   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   Thriller <= 0: Medium (8.0/3.0)
+|   |   |   |   |   |   |   Thriller > 0: Low (2.0)
+|   |   |   |   |   |   gender = Unknown: Medium (0.0)
+|   |   |   |   |   War > 0
+|   |   |   |   |   |   age <= 32: High (3.0)
+|   |   |   |   |   |   age > 32: Medium (3.0/1.0)
+|   |   |   |   occupation = executive
+|   |   |   |   |   Mystery <= 0
+|   |   |   |   |   |   release_year <= 1994
+|   |   |   |   |   |   |   age <= 32: Low (4.0)
+|   |   |   |   |   |   |   age > 32: High (4.0)
+|   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   age <= 38: Medium (31.0/17.0)
+|   |   |   |   |   |   |   age > 38: High (10.0/3.0)
+|   |   |   |   |   Mystery > 0: Low (2.0/1.0)
+|   |   |   |   occupation = healthcare
+|   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   age <= 24: Low (8.0/2.0)
+|   |   |   |   |   |   |   age > 24
+|   |   |   |   |   |   |   |   Romance <= 0: Medium (24.0/13.0)
+|   |   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (2.0)
+|   |   |   |   |   |   |   |   |   release_year > 1994: High (4.0/1.0)
+|   |   |   |   |   |   War > 0: High (2.0)
+|   |   |   |   |   Sci-Fi > 0: High (2.0)
+|   |   |   |   occupation = homemaker: High (1.0)
+|   |   |   |   occupation = lawyer
+|   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   Comedy <= 0: High (18.0/4.0)
+|   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   age <= 34: Medium (2.0)
+|   |   |   |   |   |   |   age > 34: High (2.0)
+|   |   |   |   |   Crime > 0: Medium (2.0)
+|   |   |   |   occupation = librarian
+|   |   |   |   |   War <= 0
+|   |   |   |   |   |   Romance <= 0: High (68.0/26.0)
+|   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   Action <= 0
+|   |   |   |   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   |   |   |   age <= 29: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   age > 29
+|   |   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   |   |   |   |   age <= 40: Medium (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 40: High (6.0/1.0)
+|   |   |   |   |   |   |   |   Crime > 0: Low (2.0/1.0)
+|   |   |   |   |   |   |   Action > 0: Low (3.0/1.0)
+|   |   |   |   |   War > 0: High (6.0/1.0)
+|   |   |   |   occupation = marketing
+|   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   release_year <= 1996: Low (3.0/1.0)
+|   |   |   |   |   |   |   release_year > 1996: Medium (2.0)
+|   |   |   |   |   |   gender = M: High (10.0/2.0)
+|   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   Thriller > 0: Medium (4.0/1.0)
+|   |   |   |   occupation = none
+|   |   |   |   |   age <= 26: High (5.0/1.0)
+|   |   |   |   |   age > 26: Low (3.0)
+|   |   |   |   occupation = other
+|   |   |   |   |   Musical <= 0
+|   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   Comedy <= 0
+|   |   |   |   |   |   |   |   release_year <= 1994
+|   |   |   |   |   |   |   |   |   release_year <= 1992: Medium (2.0)
+|   |   |   |   |   |   |   |   |   release_year > 1992: High (25.0/4.0)
+|   |   |   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   |   |   |   Thriller <= 0: High (28.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   |   |   age <= 34: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   age > 34: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   |   |   |   age <= 26: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   age > 26
+|   |   |   |   |   |   |   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   |   |   |   |   |   |   age <= 34: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   age > 34: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = M: High (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   |   |   |   |   Crime > 0
+|   |   |   |   |   |   |   |   |   |   age <= 25: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   age > 25: Medium (3.0)
+|   |   |   |   |   |   |   Comedy > 0
+|   |   |   |   |   |   |   |   release_year <= 1995: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   release_year > 1995: High (3.0/1.0)
+|   |   |   |   |   |   release_year > 1996: High (45.0/19.0)
+|   |   |   |   |   Musical > 0
+|   |   |   |   |   |   age <= 55: Low (3.0)
+|   |   |   |   |   |   age > 55: Medium (2.0/1.0)
+|   |   |   |   occupation = programmer
+|   |   |   |   |   War <= 0
+|   |   |   |   |   |   age <= 23
+|   |   |   |   |   |   |   release_year <= 1993: Low (3.0/1.0)
+|   |   |   |   |   |   |   release_year > 1993: Medium (10.0/2.0)
+|   |   |   |   |   |   age > 23
+|   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   Action <= 0: High (36.0/3.0)
+|   |   |   |   |   |   |   |   |   Action > 0: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   age <= 27: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   age > 27: High (11.0/2.0)
+|   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   release_year <= 1996
+|   |   |   |   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   |   |   |   release_year <= 1993: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1993: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   release_year > 1995: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   release_year > 1996: High (3.0)
+|   |   |   |   |   War > 0: Medium (8.0/2.0)
+|   |   |   |   occupation = retired: High (18.0/7.0)
+|   |   |   |   occupation = salesman: High (11.0/3.0)
+|   |   |   |   occupation = scientist: High (40.0/12.0)
+|   |   |   |   occupation = student
+|   |   |   |   |   War <= 0
+|   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   age <= 14: Low (3.0)
+|   |   |   |   |   |   |   |   age > 14: High (64.0/17.0)
+|   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   age <= 23: Medium (7.0/2.0)
+|   |   |   |   |   |   |   |   age > 23: High (2.0)
+|   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   release_year <= 1993
+|   |   |   |   |   |   |   |   release_year <= 1992: High (3.0)
+|   |   |   |   |   |   |   |   release_year > 1992: Medium (15.0/6.0)
+|   |   |   |   |   |   |   release_year > 1993: High (137.0/58.0)
+|   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   War > 0
+|   |   |   |   |   |   release_year <= 1994: High (10.0)
+|   |   |   |   |   |   release_year > 1994
+|   |   |   |   |   |   |   Action <= 0: Medium (5.0/2.0)
+|   |   |   |   |   |   |   Action > 0: High (5.0)
+|   |   |   |   occupation = technician
+|   |   |   |   |   age <= 22: Low (2.0)
+|   |   |   |   |   age > 22
+|   |   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   Sci-Fi <= 0
+|   |   |   |   |   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   |   |   |   |   release_year <= 1994: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1994: High (17.0/3.0)
+|   |   |   |   |   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   |   |   |   |   release_year <= 1995: High (3.0)
+|   |   |   |   |   |   |   |   |   |   release_year > 1995: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   Sci-Fi > 0: Medium (3.0/1.0)
+|   |   |   |   |   |   |   War > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   Crime > 0: Low (4.0/2.0)
+|   |   |   |   occupation = writer
+|   |   |   |   |   Crime <= 0
+|   |   |   |   |   |   gender = F
+|   |   |   |   |   |   |   release_year <= 1996: High (21.0/5.0)
+|   |   |   |   |   |   |   release_year > 1996: Low (7.0/2.0)
+|   |   |   |   |   |   gender = M
+|   |   |   |   |   |   |   War <= 0
+|   |   |   |   |   |   |   |   Romance <= 0
+|   |   |   |   |   |   |   |   |   release_year <= 1996: Low (18.0/8.0)
+|   |   |   |   |   |   |   |   |   release_year > 1996: Medium (7.0/2.0)
+|   |   |   |   |   |   |   |   Romance > 0
+|   |   |   |   |   |   |   |   |   age <= 32: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   age > 32: Low (3.0)
+|   |   |   |   |   |   |   War > 0: Medium (4.0/1.0)
+|   |   |   |   |   |   gender = Unknown: High (0.0)
+|   |   |   |   |   Crime > 0
+|   |   |   |   |   |   release_year <= 1996: High (3.0/1.0)
+|   |   |   |   |   |   release_year > 1996: Medium (3.0/1.0)
+|   |   |   Children > 0
+|   |   |   |   Adventure <= 0: High (21.0/9.0)
+|   |   |   |   Adventure > 0: Low (4.0)
+|   Horror > 0
+|   |   occupation = administrator
+|   |   |   Drama <= 0
+|   |   |   |   release_year <= 1995: High (3.0/1.0)
+|   |   |   |   release_year > 1995: Medium (7.0/1.0)
+|   |   |   Drama > 0: Low (2.0)
+|   |   occupation = artist: Low (3.0/2.0)
+|   |   occupation = doctor: High (0.0)
+|   |   occupation = educator
+|   |   |   Sci-Fi <= 0: Low (5.0/1.0)
+|   |   |   Sci-Fi > 0: High (3.0/1.0)
+|   |   occupation = engineer: Low (8.0/4.0)
+|   |   occupation = entertainment: Low (1.0)
+|   |   occupation = executive: High (3.0/1.0)
+|   |   occupation = healthcare: Low (3.0)
+|   |   occupation = homemaker: High (1.0)
+|   |   occupation = lawyer: Medium (1.0)
+|   |   occupation = librarian: Medium (4.0/1.0)
+|   |   occupation = marketing: Medium (2.0)
+|   |   occupation = none: High (2.0)
+|   |   occupation = other
+|   |   |   age <= 43
+|   |   |   |   age <= 28
+|   |   |   |   |   release_year <= 1995: Low (2.0)
+|   |   |   |   |   release_year > 1995: High (6.0/1.0)
+|   |   |   |   age > 28: High (4.0)
+|   |   |   age > 43: Low (2.0/1.0)
+|   |   occupation = programmer
+|   |   |   release_year <= 1993: Low (3.0/1.0)
+|   |   |   release_year > 1993: High (5.0/1.0)
+|   |   occupation = retired: Medium (3.0/1.0)
+|   |   occupation = salesman: Medium (3.0/1.0)
+|   |   occupation = scientist: Low (2.0/1.0)
+|   |   occupation = student
+|   |   |   Sci-Fi <= 0
+|   |   |   |   Romance <= 0
+|   |   |   |   |   Thriller <= 0
+|   |   |   |   |   |   release_year <= 1995
+|   |   |   |   |   |   |   age <= 21: High (4.0/1.0)
+|   |   |   |   |   |   |   age > 21: Low (4.0/2.0)
+|   |   |   |   |   |   release_year > 1995: Medium (8.0/2.0)
+|   |   |   |   |   Thriller > 0
+|   |   |   |   |   |   release_year <= 1995: Medium (5.0/1.0)
+|   |   |   |   |   |   release_year > 1995
+|   |   |   |   |   |   |   age <= 19
+|   |   |   |   |   |   |   |   Mystery <= 0: High (4.0/1.0)
+|   |   |   |   |   |   |   |   Mystery > 0: Medium (2.0)
+|   |   |   |   |   |   |   age > 19
+|   |   |   |   |   |   |   |   release_year <= 1996: High (6.0/1.0)
+|   |   |   |   |   |   |   |   release_year > 1996
+|   |   |   |   |   |   |   |   |   age <= 26
+|   |   |   |   |   |   |   |   |   |   Crime <= 0: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Crime > 0: High (2.0)
+|   |   |   |   |   |   |   |   |   age > 26: Low (2.0)
+|   |   |   |   Romance > 0: Low (3.0/1.0)
+|   |   |   Sci-Fi > 0
+|   |   |   |   Adventure <= 0: Low (4.0)
+|   |   |   |   Adventure > 0: High (3.0/1.0)
+|   |   occupation = technician: Low (1.0)
+|   |   occupation = writer
+|   |   |   gender = F: Low (5.0/2.0)
+|   |   |   gender = M: Medium (5.0)
+|   |   |   gender = Unknown: Medium (0.0)
+
+Number of Leaves  : 	471
+
+Size of the tree : 	823
+
+
+Time taken to build model: 0.46 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2650               53.0106 %
+Incorrectly Classified Instances      2349               46.9894 %
+Kappa statistic                          0.1029
+Mean absolute error                      0.3709
+Root mean squared error                  0.4725
+Relative absolute error                 94.4264 %
+Root relative squared error            106.6336 %
+Total Number of Instances             4999     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.178    0.081    0.318      0.178    0.229      0.125    0.590     0.258     Low
+                 0.174    0.132    0.330      0.174    0.228      0.054    0.515     0.289     Medium
+                 0.816    0.688    0.595      0.816    0.688      0.148    0.583     0.596     High
+Weighted Avg.    0.530    0.431    0.475      0.530    0.483      0.118    0.566     0.453     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  156  159  559 |    a = Low
+  144  236  977 |    b = Medium
+  190  320 2258 |    c = High
+

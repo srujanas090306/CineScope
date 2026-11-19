@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineScope | Discover Movies</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        🎬 CineScope
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/analytics">Analytics</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">YOUR PERSONAL MOVIE UNIVERSE</p>
+
+        <h1>
+            Discover your next<br>
+            <span>favourite movie.</span>
+        </h1>
+
+        <p>
+            Explore movies, discover hidden gems and find
+            recommendations powered by data science.
+        </p>
+
+        <form action="/" method="GET" class="search-box">
+
+            <input
+                type="text"
+                name="search"
+                placeholder="Search movies..."
+                value="{{ search }}"
+            >
+
+            <button type="submit">Search</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- STATISTICS -->
+<section class="statistics">
+
+    <div class="stat-card">
+        <h2>{{ total_movies }}</h2>
+        <p>Movies</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ total_users }}</h2>
+        <p>Users</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ total_ratings }}</h2>
+        <p>Ratings</p>
+    </div>
+
+</section>
+
+
+<!-- GENRE SECTION -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">EXPLORE</p>
+            <h2>Browse by Genre</h2>
+        </div>
+
+    </div>
+
+    <div class="genre-list">
+
+        {% for genre in genres %}
+
+            <a class="genre-chip"
+               href="{{ url_for('home', genre=genre) }}">
+
+                {{ genre }}
+
+            </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- POPULAR MOVIES -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">TRENDING</p>
+            <h2>Popular Movies</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid">
+
+        {% for movie in popular %}
+
+            <a href="/movie/{{ movie.movie_id }}"
+               class="movie-card">
+
+                <!-- MOVIE POSTER -->
+                <div class="movie-poster">
+
+                    {% if movie.poster %}
+
+                        <img
+                            src="{{ movie.poster }}"
+                            alt="{{ movie.title }} poster"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="poster-placeholder"
+                             style="display:none;">
+                            🎬
+                        </div>
+
+                    {% else %}
+
+                        <div class="poster-placeholder">
+                            🎬
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+                <!-- MOVIE INFORMATION -->
+                <div class="movie-info">
+
+                    <h3>{{ movie.title }}</h3>
+
+                    <p>{{ movie.genres }}</p>
+
+                    <div class="rating">
+                        ⭐ {{ movie.average_rating }}
+                    </div>
+
+                </div>
+
+            </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- EXPLORE MOVIES -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">DISCOVER</p>
+            <h2>Explore Movies</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid">
+
+        {% for movie in movies %}
+
+            <a href="/movie/{{ movie.movie_id }}"
+               class="movie-card">
+
+                <!-- MOVIE POSTER -->
+                <div class="movie-poster">
+
+                    {% if movie.poster %}
+
+                        <img
+                            src="{{ movie.poster }}"
+                            alt="{{ movie.title }} poster"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+
+                        <div class="poster-placeholder"
+                             style="display:none;">
+                            🎬
+                        </div>
+
+                    {% else %}
+
+                        <div class="poster-placeholder">
+                            🎬
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+                <!-- MOVIE INFORMATION -->
+                <div class="movie-info">
+
+                    <h3>{{ movie.title }}</h3>
+
+                    <p>{{ movie.genres }}</p>
+
+                    <div class="rating">
+                        ⭐ {{ movie.average_rating }}
+                    </div>
+
+                </div>
+
+            </a>
+
+        {% else %}
+
+            <p>No movies found.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>🎬 CineScope</h2>
+
+    <p>Discover. Explore. Experience Cinema.</p>
+
+    <p>Movie Recommendation and Analytics System</p>
+
+</footer>
+
+
+</body>
+</html>

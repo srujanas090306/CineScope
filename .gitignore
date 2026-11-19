@@ -1,0 +1,9 @@
+﻿# Virtual Environment
+.venv/
+venv/
+
+# KNIME Installation & Heavy Binaries
+Data_Mining/KNIME/
+*.dll
+*.exe
+*.zip

@@ -1,0 +1,19 @@
+SMO CLASSIFICATION RESULTS
+==========================
+Dataset: cinescope_movie_ratings
+Instances: 4999
+Test mode: 10-fold cross-validation
+
+Correctly Classified: 2760
+Incorrectly Classified: 2239
+Accuracy: 55.211%
+Kappa: 0.0213
+MAE: 0.3592
+RMSE: 0.4594
+Weighted Precision: 0.428
+Weighted Recall: 0.552
+Weighted F-measure: 0.413
+Training Time: 4.22 seconds
+
+Note: The original 100000-instance run was cancelled.
+These results are from the earlier completed 4999-instance run.

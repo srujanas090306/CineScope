@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recommendations | CineScope</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Cine<span>Scope</span></div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/recommendations" class="active">Recommendations</a>
+        <a href="/analytics">Analytics</a>
+    </div>
+</nav>
+
+<section class="recommendation-hero">
+
+    <p class="section-label">PERSONALIZED FOR YOU</p>
+
+    <h1>Find Your Next <span>Favourite.</span></h1>
+
+    <p>
+        Discover movies based on your ratings and genre preferences.
+    </p>
+
+    <form action="/recommendations" method="POST"
+          class="recommendation-form">
+
+        <input
+            type="number"
+            name="user_id"
+            placeholder="Enter your MovieLens User ID"
+            min="1"
+            max="943"
+            required
+        >
+
+        <button type="submit">Get Recommendations →</button>
+
+    </form>
+
+    <p class="form-hint">
+        Enter a user ID between 1 and 943.
+    </p>
+
+</section>
+
+
+{% if error is defined and error %}
+
+<div class="error-message">
+    {{ error }}
+</div>
+
+{% endif %}
+
+
+{% if recommended %}
+
+<section class="recommendation-results">
+
+    <div class="section-heading">
+        <p class="section-label">YOUR MOVIE LIST</p>
+        <h2>Recommended Movies</h2>
+        <p>Here are some movies you might enjoy, User {{ user_id }}.</p>
+    </div>
+
+    <div class="movie-grid">
+
+        {% for movie in recommended %}
+
+        <div class="movie-card">
+
+            <div class="movie-poster">
+                🎬
+            </div>
+
+            <div class="movie-info">
+
+                <h3>{{ movie.title }}</h3>
+
+                <p class="movie-genres">
+                    {{ movie.genres }}
+                </p>
+
+                <div class="movie-rating">
+                    ⭐ {{ "%.1f"|format(movie.average_rating|float) }}
+                    <span>
+                        ({{ movie.total_ratings }} ratings)
+                    </span>
+                </div>
+
+                <a href="/movie/{{ movie.movie_id }}"
+                   class="movie-button">
+                    View Details →
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+<footer class="footer">
+    <p>© 2026 CineScope | Discover. Explore. Experience.</p>
+</footer>
+
+</body>
+</html>

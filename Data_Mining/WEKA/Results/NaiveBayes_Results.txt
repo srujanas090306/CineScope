@@ -1,0 +1,227 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     cinescope_movie_ratings-weka.filters.supervised.instance.Resample-B0.0-S1-Z5.0-no-replacement
+Instances:    4999
+Attributes:   24
+              age
+              gender
+              occupation
+              release_year
+              unknown
+              Action
+              Adventure
+              Animation
+              Children
+              Comedy
+              Crime
+              Documentary
+              Drama
+              Fantasy
+              Film-Noir
+              Horror
+              Musical
+              Mystery
+              Romance
+              Sci-Fi
+              Thriller
+              War
+              Western
+              rating_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                      Class
+Attribute               Low    Medium      High
+                     (0.17)    (0.27)    (0.55)
+================================================
+age
+  mean               31.3673    33.182      33.4
+  std. dev.          10.7181   11.4956   11.8947
+  weight sum             874      1357      2768
+  precision           1.1379    1.1379    1.1379
+
+gender
+  F                    237.0     341.0     738.0
+  M                    639.0    1018.0    2032.0
+  Unknown                1.0       1.0       1.0
+  [total]              877.0    1360.0    2771.0
+
+occupation
+  administrator         54.0     105.0     243.0
+  artist                18.0      25.0      90.0
+  doctor                 3.0       9.0      22.0
+  educator              74.0     118.0     289.0
+  engineer              70.0     122.0     209.0
+  entertainment         19.0      25.0      47.0
+  executive             49.0      35.0      83.0
+  healthcare            58.0      41.0      51.0
+  homemaker              5.0       4.0       9.0
+  lawyer                 4.0      20.0      46.0
+  librarian             39.0      86.0     133.0
+  marketing             14.0      34.0      36.0
+  none                   7.0       8.0      35.0
+  other                 91.0     151.0     298.0
+  programmer            61.0     105.0     224.0
+  retired               10.0      35.0      52.0
+  salesman              12.0       8.0      29.0
+  scientist             12.0      24.0      62.0
+  student              201.0     292.0     606.0
+  technician            26.0      44.0     103.0
+  writer                68.0      87.0     122.0
+  [total]              895.0    1378.0    2789.0
+
+release_year
+  mean             1992.3673 1989.6721 1986.4442
+  std. dev.            9.378   12.9849   15.4573
+  weight sum             874      1357      2768
+  precision           1.1343    1.1343    1.1343
+
+unknown
+  mean                     0         0    0.0004
+  std. dev.           0.1667    0.1667    0.1667
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Action
+  mean                0.2574    0.2778    0.2439
+  std. dev.           0.4372    0.4479    0.4294
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Adventure
+  mean                0.1362    0.1371    0.1333
+  std. dev.            0.343    0.3439    0.3399
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Animation
+  mean                0.0309    0.0339    0.0401
+  std. dev.            0.173     0.181    0.1962
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Children
+  mean                0.0892      0.07    0.0672
+  std. dev.           0.2851    0.2552    0.2504
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Comedy
+  mean                0.3547    0.3301     0.289
+  std. dev.           0.4784    0.4703    0.4533
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Crime
+  mean                0.0652    0.0766    0.0827
+  std. dev.           0.2469     0.266    0.2755
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Documentary
+  mean                0.0046    0.0037    0.0033
+  std. dev.           0.1667    0.1667    0.1667
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Drama
+  mean                0.3032    0.3596    0.4321
+  std. dev.           0.4596    0.4799    0.4954
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Fantasy
+  mean                0.0172    0.0169    0.0087
+  std. dev.           0.1667    0.1667    0.1667
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Film-Noir
+  mean                0.0092     0.014    0.0231
+  std. dev.           0.1667    0.1667    0.1667
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Horror
+  mean                0.0812    0.0597    0.0455
+  std. dev.           0.2732    0.2369    0.2084
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Musical
+  mean                0.0515    0.0575    0.0488
+  std. dev.            0.221    0.2328    0.2154
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Mystery
+  mean                0.0343    0.0442    0.0574
+  std. dev.           0.1821    0.2056    0.2327
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Romance
+  mean                0.1739    0.1901    0.2204
+  std. dev.            0.379    0.3924    0.4145
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Sci-Fi
+  mean                0.1419    0.1186    0.1293
+  std. dev.           0.3489    0.3234    0.3356
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Thriller
+  mean                0.2288    0.2321    0.2128
+  std. dev.           0.4201    0.4222    0.4093
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+War
+  mean                0.0641    0.0707    0.1044
+  std. dev.           0.2449    0.2564    0.3058
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+Western
+  mean                0.0092    0.0243    0.0177
+  std. dev.           0.1667    0.1667    0.1667
+  weight sum             874      1357      2768
+  precision                1         1         1
+
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2693               53.8708 %
+Incorrectly Classified Instances      2306               46.1292 %
+Kappa statistic                          0.0971
+Mean absolute error                      0.3799
+Root mean squared error                  0.444 
+Relative absolute error                 96.7092 %
+Root relative squared error            100.195  %
+Total Number of Instances             4999     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.243    0.109    0.320      0.243    0.276      0.150    0.648     0.273     Low
+                 0.068    0.045    0.359      0.068    0.114      0.046    0.534     0.299     Medium
+                 0.863    0.758    0.585      0.863    0.698      0.134    0.621     0.655     High
+Weighted Avg.    0.539    0.451    0.478      0.539    0.466      0.113    0.602     0.492     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  212   47  615 |    a = Low
+  188   92 1077 |    b = Medium
+  262  117 2389 |    c = High
+

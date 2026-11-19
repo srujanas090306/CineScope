@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | CineScope</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Cine<span>Scope</span></div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/analytics" class="active">Analytics</a>
+    </div>
+</nav>
+
+<section class="dashboard">
+
+    <div class="dashboard-heading">
+        <p class="section-label">DATA INSIGHTS</p>
+        <h1>Movie Analytics <span>Dashboard</span></h1>
+        <p>Explore trends, ratings and audience preferences.</p>
+    </div>
+
+    <!-- STATISTICS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Movies</h3>
+            <p>{{ total_movies | default(0) }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Ratings</h3>
+            <p>{{ total_ratings | default(0) }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p>{{ total_users | default(0) }}</p>
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+            <h2>Rating Distribution</h2>
+            <p>Number of ratings for each score.</p>
+            <canvas id="ratingChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Genre Popularity</h2>
+            <p>Number of movies belonging to each genre.</p>
+            <canvas id="genreChart"></canvas>
+        </div>
+
+        <div class="chart-card full-width">
+            <h2>Average Rating by Genre</h2>
+            <p>Average audience rating for each genre.</p>
+            <canvas id="averageChart"></canvas>
+        </div>
+        <!-- TOP 10 MOVIES -->
+
+<div class="chart-card">
+    <h2>Top 10 Highest-Rated Movies</h2>
+    <p>Movies with at least 20 user ratings.</p>
+    <canvas id="topMoviesChart"></canvas>
+</div>
+
+
+<!-- GENDER ANALYSIS -->
+
+<div class="chart-card">
+    <h2>Ratings by Gender</h2>
+    <p>Average ratings across user demographics.</p>
+    <canvas id="genderChart"></canvas>
+</div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 CineScope | Discover. Explore. Experience.</p>
+</footer>
+
+<script type="text/javascript">
+
+// Safely receive data from Flask
+
+const ratingLabels = {{ rating_labels | default([], true) | tojson }};
+const ratingValues = {{ rating_values | default([], true) | tojson }};
+
+const genreLabels = {{ genre_labels | default([], true) | tojson }};
+const genreValues = {{ genre_values | default([], true) | tojson }};
+
+const averageLabels = {{ average_labels | default([], true) | tojson }};
+const averageValues = {{ average_values | default([], true) | tojson }};
+
+const topMovieLabels = {{ top_movie_labels | default([], true) | tojson }};
+const topMovieValues = {{ top_movie_values | default([], true) | tojson }};
+
+const genderLabels = {{ gender_labels | default([], true) | tojson }};
+const genderValues = {{ gender_values | default([], true) | tojson }};
+
+// Check whether Chart.js loaded
+
+if (typeof Chart === "undefined") {
+    console.error("Chart.js failed to load. Check your internet connection.");
+} else {
+
+    // 1. RATING DISTRIBUTION
+
+    new Chart(document.getElementById("ratingChart"), {
+        type: "bar",
+
+        data: {
+            labels: ratingLabels,
+
+            datasets: [{
+                label: "Number of Ratings",
+                data: ratingValues,
+                backgroundColor: "#ffb84d",
+                borderRadius: 6
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // 2. GENRE POPULARITY
+
+    new Chart(document.getElementById("genreChart"), {
+        type: "doughnut",
+
+        data: {
+            labels: genreLabels,
+
+            datasets: [{
+                label: "Movies",
+                data: genreValues,
+
+                backgroundColor: [
+                    "#ffb84d", "#e58b45", "#c76b42",
+                    "#9e543e", "#784b42", "#e8bd77",
+                    "#b88a63", "#d9a06b", "#a35d38",
+                    "#f0cf9a", "#c58b62", "#875d4b",
+                    "#edaa5b", "#b76b49", "#d9bd91",
+                    "#8d6a55", "#c99a75", "#e7a878"
+                ],
+
+                borderWidth: 2,
+                borderColor: "#302721"
+            }]
+        },
+
+        options: {
+            responsive: true,
+
+            plugins: {
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        color: "#ffffff"
+                    }
+                }
+            }
+        }
+    });
+
+
+    // 3. AVERAGE RATING BY GENRE
+
+    new Chart(document.getElementById("averageChart"), {
+        type: "bar",
+
+        data: {
+            labels: averageLabels,
+
+            datasets: [{
+                label: "Average Rating",
+                data: averageValues,
+                backgroundColor: "#e58b45",
+                borderRadius: 6
+            }]
+        },
+
+        options: {
+            indexAxis: "y",
+            responsive: true,
+
+            scales: {
+                x: {
+                    min: 0,
+                    max: 5,
+                    ticks: {
+                        color: "#ffffff"
+                    }
+                },
+
+                y: {
+                    ticks: {
+                        color: "#ffffff"
+                    }
+                }
+            },
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+}
+// TOP 10 HIGHEST-RATED MOVIES
+
+new Chart(document.getElementById("topMoviesChart"), {
+    type: "bar",
+
+    data: {
+        labels: topMovieLabels,
+
+        datasets: [{
+            label: "Average Rating",
+            data: topMovieValues,
+            backgroundColor: "#ffb84d",
+            borderRadius: 6
+        }]
+    },
+
+    options: {
+        indexAxis: "y",
+        responsive: true,
+
+        scales: {
+            x: {
+                min: 0,
+                max: 5
+            }
+        },
+
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+
+// RATINGS BY GENDER
+
+new Chart(document.getElementById("genderChart"), {
+    type: "bar",
+
+    data: {
+        labels: genderLabels,
+
+        datasets: [{
+            label: "Average Rating",
+            data: genderValues,
+            backgroundColor: ["#ffb84d", "#c76b42"],
+            borderRadius: 6
+        }]
+    },
+
+    options: {
+        responsive: true,
+
+        scales: {
+            y: {
+                min: 0,
+                max: 5
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>

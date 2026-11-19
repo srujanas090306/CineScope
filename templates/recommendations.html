@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recommendations | CineScope</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">Cine<span>Scope</span></div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/recommendations" class="active">Recommendations</a>
+        <a href="/analytics">Analytics</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="recommendation-hero">
+
+    <p class="section-label">POWERED BY HYBRID AI</p>
+
+    <h1>Find Your Next <span>Favourite.</span></h1>
+
+    <p>
+        Discover movies using your viewing history,
+        ratings and movie preferences.
+    </p>
+
+    <form action="/recommendations"
+          method="POST"
+          class="recommendation-form">
+
+        <input
+            type="number"
+            name="user_id"
+            placeholder="Enter your MovieLens User ID"
+            min="1"
+            max="943"
+            value="{{ user_id }}"
+            required
+        >
+
+        <button type="submit">
+            Get Recommendations →
+        </button>
+
+    </form>
+
+    <p class="form-hint">
+        Enter a user ID between 1 and 943.
+    </p>
+
+</section>
+
+
+<!-- ERROR MESSAGE -->
+
+{% if error %}
+
+<div class="error-message">
+    {{ error }}
+</div>
+
+{% endif %}
+
+
+<!-- RECOMMENDATION RESULTS -->
+
+{% if recommended %}
+
+<section class="recommendation-results">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            YOUR PERSONALIZED MOVIE LIST
+        </p>
+
+        <h2>Recommended Movies</h2>
+
+        <p>
+            Based on your ratings, User {{ user_id }}.
+        </p>
+
+    </div>
+
+
+    <div class="movie-grid">
+
+        {% for movie in recommended %}
+
+        <div class="movie-card">
+
+            <div class="movie-poster">
+
+                {% if movie.poster %}
+
+                    <img
+                        src="{{ movie.poster }}"
+                        alt="{{ movie.title }} poster"
+                        loading="lazy"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    >
+
+                    <div class="poster-placeholder"
+                         style="display:none;">
+                        🎬
+                    </div>
+                    <div class="recommendation-scores">
+
+    <p>
+        <strong>Hybrid Score:</strong>
+        {{ (movie.hybrid_score * 100)|round(1) }}%
+    </p>
+
+    <p>
+        Content Match:
+        {{ (movie.content_score * 100)|round(1) }}%
+    </p>
+
+    <p>
+        Collaborative Match:
+        {{ (movie.collaborative_score * 100)|round(1) }}%
+    </p>
+
+</div>
+
+                {% else %}
+
+                    <div class="poster-placeholder">
+                        🎬
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="movie-info">
+
+                <h3>{{ movie.title }}</h3>
+
+                <p class="movie-genres">
+                    {{ movie.genres }}
+                </p>
+
+
+                <div class="movie-rating">
+
+                    <span>
+                        Hybrid Score:
+                    </span>
+
+                    <strong>
+                        {{ "%.2f"|format(movie.hybrid_score) }}
+                    </strong>
+
+                </div>
+
+
+                <div class="recommendation-scores">
+
+                    <p>
+                        Content:
+                        {{ "%.2f"|format(movie.content_score) }}
+                    </p>
+
+                    <p>
+                        Collaborative:
+                        {{ "%.2f"|format(movie.collaborative_score) }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+<footer class="footer">
+
+    <p>
+        © 2026 CineScope. Discover movies you'll love.
+    </p>
+
+</footer>
+
+</body>
+</html>

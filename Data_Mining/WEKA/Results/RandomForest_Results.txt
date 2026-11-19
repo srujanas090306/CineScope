@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     cinescope_movie_ratings-weka.filters.supervised.instance.Resample-B0.0-S1-Z5.0-no-replacement
+Instances:    4999
+Attributes:   24
+              age
+              gender
+              occupation
+              release_year
+              unknown
+              Action
+              Adventure
+              Animation
+              Children
+              Comedy
+              Crime
+              Documentary
+              Drama
+              Fantasy
+              Film-Noir
+              Horror
+              Musical
+              Mystery
+              Romance
+              Sci-Fi
+              Thriller
+              War
+              Western
+              rating_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2624               52.4905 %
+Incorrectly Classified Instances      2375               47.5095 %
+Kappa statistic                          0.1335
+Mean absolute error                      0.3642
+Root mean squared error                  0.4573
+Relative absolute error                 92.719  %
+Root relative squared error            103.2009 %
+Total Number of Instances             4999     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.241    0.089    0.364      0.241    0.290      0.181    0.630     0.292     Low
+                 0.250    0.189    0.329      0.250    0.284      0.066    0.548     0.307     Medium
+                 0.749    0.590    0.612      0.749    0.673      0.169    0.616     0.640     High
+Weighted Avg.    0.525    0.394    0.492      0.525    0.501      0.143    0.600     0.489     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+  211  208  455 |    a = Low
+  156  339  862 |    b = Medium
+  212  482 2074 |    c = High
+

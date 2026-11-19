@@ -1,0 +1,587 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | CineScope</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">Cine<span>Scope</span></div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/analytics" class="active">Analytics</a>
+    </div>
+</nav>
+
+<section class="dashboard">
+
+    <div class="dashboard-heading">
+        <p class="section-label">DATA INSIGHTS</p>
+        <h1>Movie Analytics <span>Dashboard</span></h1>
+        <p>Explore trends, ratings and audience preferences.</p>
+    </div>
+
+    <!-- STATISTICS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Movies</h3>
+            <p>{{ total_movies | default(0) }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Ratings</h3>
+            <p>{{ total_ratings | default(0) }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p>{{ total_users | default(0) }}</p>
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+            <h2>Rating Distribution</h2>
+            <p>Number of ratings for each score.</p>
+            <canvas id="ratingChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Genre Popularity</h2>
+            <p>Number of movies belonging to each genre.</p>
+            <canvas id="genreChart"></canvas>
+        </div>
+
+        <div class="chart-card full-width">
+            <h2>Average Rating by Genre</h2>
+            <p>Average audience rating for each genre.</p>
+            <canvas id="averageChart"></canvas>
+        </div>
+        <!-- TOP 10 MOVIES -->
+
+<div class="chart-card">
+    <h2>Top 10 Highest-Rated Movies</h2>
+    <p>Movies with at least 20 user ratings.</p>
+    <canvas id="topMoviesChart"></canvas>
+</div>
+
+
+<!-- GENDER ANALYSIS -->
+
+<div class="chart-card">
+    <h2>Ratings by Gender</h2>
+    <p>Average ratings across user demographics.</p>
+    <canvas id="genderChart"></canvas>
+</div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>Â© 2026 CineScope | Discover. Explore. Experience.</p>
+</footer>
+
+<script type="text/javascript">
+
+// Safely receive data from Flask
+
+const ratingLabels = {{ rating_labels | default([], true) | tojson }};
+const ratingValues = {{ rating_values | default([], true) | tojson }};
+
+const genreLabels = {{ genre_labels | default([], true) | tojson }};
+const genreValues = {{ genre_values | default([], true) | tojson }};
+
+const averageLabels = {{ average_labels | default([], true) | tojson }};
+const averageValues = {{ average_values | default([], true) | tojson }};
+
+const topMovieLabels = {{ top_movie_labels | default([], true) | tojson }};
+const topMovieValues = {{ top_movie_values | default([], true) | tojson }};
+
+const genderLabels = {{ gender_labels | default([], true) | tojson }};
+const genderValues = {{ gender_values | default([], true) | tojson }};
+
+// Check whether Chart.js loaded
+
+if (typeof Chart === "undefined") {
+    console.error("Chart.js failed to load. Check your internet connection.");
+} else {
+
+    // 1. RATING DISTRIBUTION
+
+    new Chart(document.getElementById("ratingChart"), {
+        type: "bar",
+
+        data: {
+            labels: ratingLabels,
+
+            datasets: [{
+                label: "Number of Ratings",
+                data: ratingValues,
+                backgroundColor: "#ffb84d",
+                borderRadius: 6
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // 2. GENRE POPULARITY
+
+    new Chart(document.getElementById("genreChart"), {
+        type: "doughnut",
+
+        data: {
+            labels: genreLabels,
+
+            datasets: [{
+                label: "Movies",
+                data: genreValues,
+
+                backgroundColor: [
+                    "#ffb84d", "#e58b45", "#c76b42",
+                    "#9e543e", "#784b42", "#e8bd77",
+                    "#b88a63", "#d9a06b", "#a35d38",
+                    "#f0cf9a", "#c58b62", "#875d4b",
+                    "#edaa5b", "#b76b49", "#d9bd91",
+                    "#8d6a55", "#c99a75", "#e7a878"
+                ],
+
+                borderWidth: 2,
+                borderColor: "#302721"
+            }]
+        },
+
+        options: {
+            responsive: true,
+
+            plugins: {
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        color: "#ffffff"
+                    }
+                }
+            }
+        }
+    });
+
+
+    // 3. AVERAGE RATING BY GENRE
+
+    new Chart(document.getElementById("averageChart"), {
+        type: "bar",
+
+        data: {
+            labels: averageLabels,
+
+            datasets: [{
+                label: "Average Rating",
+                data: averageValues,
+                backgroundColor: "#e58b45",
+                borderRadius: 6
+            }]
+        },
+
+        options: {
+            indexAxis: "y",
+            responsive: true,
+
+            scales: {
+                x: {
+                    min: 0,
+                    max: 5,
+                    ticks: {
+                        color: "#ffffff"
+                    }
+                },
+
+                y: {
+                    ticks: {
+                        color: "#ffffff"
+                    }
+                }
+            },
+
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+}
+// TOP 10 HIGHEST-RATED MOVIES
+
+new Chart(document.getElementById("topMoviesChart"), {
+    type: "bar",
+
+    data: {
+        labels: topMovieLabels,
+
+        datasets: [{
+            label: "Average Rating",
+            data: topMovieValues,
+            backgroundColor: "#ffb84d",
+            borderRadius: 6
+        }]
+    },
+
+    options: {
+        indexAxis: "y",
+        responsive: true,
+
+        scales: {
+            x: {
+                min: 0,
+                max: 5
+            }
+        },
+
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+
+// RATINGS BY GENDER
+
+new Chart(document.getElementById("genderChart"), {
+    type: "bar",
+
+    data: {
+        labels: genderLabels,
+
+        datasets: [{
+            label: "Average Rating",
+            data: genderValues,
+            backgroundColor: ["#ffb84d", "#c76b42"],
+            borderRadius: 6
+        }]
+    },
+
+    options: {
+        responsive: true,
+
+        scales: {
+            y: {
+                min: 0,
+                max: 5
+            }
+        }
+    }
+});
+
+</script>
+
+<!-- ==========================================
+     WEKA CLASSIFICATION ANALYSIS
+========================================== -->
+
+<section class="weka-section" id="classification">
+
+    <div class="weka-heading">
+        <span class="weka-tag">WEKA MACHINE LEARNING</span>
+        <h2>Classification Analysis</h2>
+        <p>Comparative evaluation of four supervised machine learning algorithms.</p>
+    </div>
+
+    <div class="weka-summary-grid">
+
+        <div class="weka-summary-card">
+            <h3>J48</h3>
+            <div class="weka-value">53.01%</div>
+            <p>Accuracy</p>
+            <span>Decision Tree</span>
+        </div>
+
+        <div class="weka-summary-card">
+            <h3>Random Forest</h3>
+            <div class="weka-value">52.49%</div>
+            <p>Accuracy</p>
+            <span>Ensemble Learning</span>
+        </div>
+
+        <div class="weka-summary-card">
+            <h3>Naive Bayes</h3>
+            <div class="weka-value">53.87%</div>
+            <p>Accuracy</p>
+            <span>Probabilistic Model</span>
+        </div>
+
+        <div class="weka-summary-card highlight">
+            <h3>SMO</h3>
+            <div class="weka-value">55.21%</div>
+            <p>Accuracy</p>
+            <span>Support Vector Machine</span>
+        </div>
+
+    </div>
+
+    <div class="weka-subheading">
+        <h3>Classification Performance Comparison</h3>
+        <p>Evaluation metrics obtained from the completed 10-fold cross-validation experiments.</p>
+    </div>
+
+    <div class="weka-table-wrapper">
+
+        <table class="weka-table">
+
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>J48</th>
+                    <th>Random Forest</th>
+                    <th>Naive Bayes</th>
+                    <th>SMO</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>Accuracy</td><td>53.01%</td><td>52.49%</td><td>53.87%</td><td>55.21%</td></tr>
+                <tr><td>Precision</td><td>0.475</td><td>0.492</td><td>0.478</td><td>0.428</td></tr>
+                <tr><td>Recall</td><td>0.530</td><td>0.525</td><td>0.539</td><td>0.552</td></tr>
+                <tr><td>F-Measure</td><td>0.483</td><td>0.501</td><td>0.466</td><td>0.413</td></tr>
+                <tr><td>Kappa</td><td>0.1029</td><td>0.1335</td><td>0.0971</td><td>0.0213</td></tr>
+                <tr><td>MAE</td><td>0.3709</td><td>0.3642</td><td>0.3799</td><td>0.3592</td></tr>
+                <tr><td>RMSE</td><td>0.4725</td><td>0.4573</td><td>0.4440</td><td>0.4594</td></tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="weka-subheading">
+        <h3>Classification Visualizations</h3>
+        <p>Graphical comparison of algorithm performance across evaluation metrics.</p>
+    </div>
+
+    <div class="weka-chart-grid">
+
+        <div class="weka-chart-card">
+            <h4>Accuracy Comparison</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/01_accuracy.png') }}" alt="Accuracy comparison">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>Precision Comparison</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/02_precision.png') }}" alt="Precision comparison">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>Recall Comparison</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/03_recall.png') }}" alt="Recall comparison">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>F-Measure Comparison</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/04_f_measure.png') }}" alt="F measure comparison">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>Kappa Statistic</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/05_kappa.png') }}" alt="Kappa comparison">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>Root Mean Squared Error</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/06_rmse.png') }}" alt="RMSE comparison">
+        </div>
+
+        <div class="weka-chart-card weka-chart-wide">
+            <h4>Combined Classification Metrics</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Classification/07_combined_metrics.png') }}" alt="Combined classification metrics">
+        </div>
+
+    </div>
+
+    <div class="weka-findings">
+
+        <h3>Classification Findings</h3>
+
+        <ul>
+            <li><strong>SMO</strong> achieved the highest accuracy at 55.21%.</li>
+            <li><strong>Random Forest</strong> achieved the highest F-Measure (0.501) and Kappa statistic (0.1335).</li>
+            <li><strong>Naive Bayes</strong> recorded the lowest RMSE of 0.4440.</li>
+            <li>All four models produced relatively low Kappa values, indicating limited agreement beyond chance.</li>
+            <li>No single classifier performed best across every evaluation metric.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     WEKA CLUSTERING ANALYSIS
+========================================== -->
+
+<section class="weka-section" id="clustering">
+
+    <div class="weka-heading">
+        <span class="weka-tag">UNSUPERVISED MACHINE LEARNING</span>
+        <h2>Clustering Analysis</h2>
+        <p>Comparison of SimpleKMeans and Expectation-Maximization clustering algorithms.</p>
+    </div>
+
+    <div class="weka-summary-grid clustering-summary">
+
+        <div class="weka-summary-card">
+            <h3>SimpleKMeans</h3>
+            <div class="weka-value">42.01%</div>
+            <p>Cluster Agreement</p>
+            <span>3 Clusters</span>
+        </div>
+
+        <div class="weka-summary-card highlight">
+            <h3>EM Clustering</h3>
+            <div class="weka-value">44.65%</div>
+            <p>Cluster Agreement</p>
+            <span>3 Clusters</span>
+        </div>
+
+    </div>
+
+    <div class="weka-subheading">
+        <h3>Clustering Performance Comparison</h3>
+        <p>Results from the classes-to-clusters evaluation on the experimental dataset.</p>
+    </div>
+
+    <div class="weka-table-wrapper">
+
+        <table class="weka-table">
+
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>SimpleKMeans</th>
+                    <th>EM Clustering</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>Number of Clusters</td><td>3</td><td>3</td></tr>
+                <tr><td>Correctly Clustered</td><td>42.0084%</td><td>44.6489%</td></tr>
+                <tr><td>Incorrectly Clustered</td><td>57.9916%</td><td>55.3511%</td></tr>
+                <tr><td>Build Time</td><td>0.14 seconds</td><td>0.51 seconds</td></tr>
+                <tr><td>Cluster 0</td><td>2819 (56%)</td><td>3332 (67%)</td></tr>
+                <tr><td>Cluster 1</td><td>962 (19%)</td><td>1006 (20%)</td></tr>
+                <tr><td>Cluster 2</td><td>1218 (24%)</td><td>661 (13%)</td></tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="weka-subheading">
+        <h3>Clustering Visualizations</h3>
+        <p>Cluster agreement, distribution and execution-time comparison.</p>
+    </div>
+
+    <div class="weka-chart-grid">
+
+        <div class="weka-chart-card">
+            <h4>Clustering Agreement</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Clustering/01_clustering_agreement.png') }}" alt="Clustering agreement">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>SimpleKMeans Cluster Distribution</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Clustering/02_simplekmeans_distribution.png') }}" alt="SimpleKMeans distribution">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>EM Cluster Distribution</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Clustering/03_em_distribution.png') }}" alt="EM distribution">
+        </div>
+
+        <div class="weka-chart-card">
+            <h4>Algorithm Build Time</h4>
+            <img src="{{ url_for('static', filename='images/analytics/Clustering/04_build_time.png') }}" alt="Build time comparison">
+        </div>
+
+    </div>
+
+    <div class="weka-findings">
+
+        <h3>Clustering Findings</h3>
+
+        <ul>
+            <li><strong>EM Clustering</strong> achieved higher cluster agreement at 44.65%.</li>
+            <li><strong>SimpleKMeans</strong> completed execution faster, with a build time of 0.14 seconds.</li>
+            <li>EM required 0.51 seconds to build its clustering model.</li>
+            <li>Both algorithms generated three clusters with different distributions.</li>
+            <li>Cluster agreement is not directly equivalent to classification accuracy because clustering is an unsupervised learning task.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     OVERALL RESEARCH CONCLUSION
+========================================== -->
+
+<section class="weka-conclusion">
+
+    <span class="weka-tag">PROJECT INSIGHTS</span>
+
+    <h2>Overall Research Findings</h2>
+
+    <p>
+        The experiments demonstrate how different machine learning algorithms
+        perform when analyzing movie-rating data. Classification models were
+        evaluated using accuracy, precision, recall, F-measure and error metrics,
+        while clustering models were evaluated using cluster agreement,
+        distribution and execution time.
+    </p>
+
+    <p>
+        SMO achieved the highest classification accuracy, whereas Random Forest
+        provided the strongest F-measure and Kappa results. In clustering,
+        EM achieved higher cluster agreement, while SimpleKMeans offered faster
+        execution.
+    </p>
+
+</section>
+</body>
+</html>
