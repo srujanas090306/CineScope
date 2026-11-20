@@ -1,0 +1,2748 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20263.26.1116.2056                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='e0754898259af705f9f4d298b1cccada7c456c81bb9cf887b11a0799297e8ffa' _.fcp.WorkbookFingerprinting.true...creator-author-id='e0754898259af705f9f4d298b1cccada7c456c81bb9cf887b11a0799297e8ffa' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='e0754898259af705f9f4d298b1cccada7c456c81bb9cf887b11a0799297e8ffa' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='e0754898259af705f9f4d298b1cccada7c456c81bb9cf887b11a0799297e8ffa' original-version='18.1' source-build='2026.3.1 (20263.26.1116.2056)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cinescope_master' inline='true' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cinescope_master' name='textscan.1fidhv3010dj0w19pqtds03ccn6y'>
+            <connection class='textscan' directory='C:/Users/sruja/OneDrive/Desktop/CineScope/Dataset/Processed' filename='cinescope_master.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1fidhv3010dj0w19pqtds03ccn6y' name='cinescope_master.csv' table='[cinescope_master#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=';'>
+            <column datatype='real' name='release_year' ordinal='0' />
+            <column datatype='integer' name='user_id' ordinal='1' />
+            <column datatype='integer' name='movie_id' ordinal='2' />
+            <column datatype='integer' name='rating' ordinal='3' />
+            <column datatype='integer' name='timestamp' ordinal='4' />
+            <column datatype='string' name='title' ordinal='5' />
+            <column datatype='date' name='release_date' ordinal='6' />
+            <column datatype='string' name='video_release_date' ordinal='7' />
+            <column datatype='string' name='imdb_url' ordinal='8' />
+            <column datatype='integer' name='unknown' ordinal='9' />
+            <column datatype='integer' name='Action' ordinal='10' />
+            <column datatype='integer' name='Adventure' ordinal='11' />
+            <column datatype='integer' name='Animation' ordinal='12' />
+            <column datatype='integer' name='Children' ordinal='13' />
+            <column datatype='integer' name='Comedy' ordinal='14' />
+            <column datatype='integer' name='Crime' ordinal='15' />
+            <column datatype='integer' name='Documentary' ordinal='16' />
+            <column datatype='integer' name='Drama' ordinal='17' />
+            <column datatype='integer' name='Fantasy' ordinal='18' />
+            <column datatype='integer' name='Film-Noir' ordinal='19' />
+            <column datatype='integer' name='Horror' ordinal='20' />
+            <column datatype='integer' name='Musical' ordinal='21' />
+            <column datatype='integer' name='Mystery' ordinal='22' />
+            <column datatype='integer' name='Romance' ordinal='23' />
+            <column datatype='integer' name='Sci-Fi' ordinal='24' />
+            <column datatype='integer' name='Thriller' ordinal='25' />
+            <column datatype='integer' name='War' ordinal='26' />
+            <column datatype='integer' name='Western' ordinal='27' />
+            <column datatype='integer' name='age' ordinal='28' />
+            <column datatype='string' name='gender' ordinal='29' />
+            <column datatype='string' name='occupation' ordinal='30' />
+            <column datatype='integer' name='zip_code' ordinal='31' />
+            <column datatype='string' name='genres' ordinal='32' />
+            <column datatype='datetime' name='rating_date' ordinal='33' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[movie_id]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>movie_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>video_release_date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[video_release_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>video_release_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>imdb_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[imdb_url]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>imdb_url</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unknown]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>unknown</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Action</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Action]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Action</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adventure</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Adventure]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Adventure</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Animation</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Animation]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Animation</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Children</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Children]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Children</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comedy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Comedy]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Comedy</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Crime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Crime]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Crime</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Documentary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Documentary]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Documentary</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Drama</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Drama]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Drama</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fantasy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fantasy]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Fantasy</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Film-Noir</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Film-Noir]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Film-Noir</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Horror</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Horror]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Horror</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Musical</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Musical]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Musical</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mystery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mystery]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Mystery</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Romance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Romance]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Romance</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sci-Fi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sci-Fi]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Sci-Fi</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Thriller</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Thriller]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Thriller</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>War</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[War]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>War</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Western</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Western]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>Western</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>occupation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[occupation]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>occupation</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip_code]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>zip_code</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[rating_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>rating_date</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Action (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[Action]' peg='0' size='0.303' />
+      </column>
+      <column datatype='integer' name='[Action]' role='measure' type='quantitative' />
+      <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+      </column>
+      <column caption='Rating (bin)' datatype='integer' name='[Rating (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[rating]' peg='0' size='0.5' />
+      </column>
+      <column caption='cinescope_master.csv' datatype='table' name='[__tableau_internal_object_id__].[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Imdb Url' datatype='string' name='[imdb_url]' role='dimension' type='nominal' />
+      <column caption='Movie Id' datatype='integer' name='[movie_id]' role='dimension' type='ordinal' />
+      <column caption='Occupation' datatype='string' name='[occupation]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Timestamp' datatype='integer' name='[timestamp]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Unknown' datatype='integer' name='[unknown]' role='measure' type='quantitative' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column caption='Video Release Date' datatype='string' name='[video_release_date]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Zip Code' datatype='integer' default-format='*00000' name='[zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <group caption='Action (Gender)' hidden='true' name='[Action (Gender)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[gender]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1708d6c0qo0rvi1h1o1ic173c6af.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2026 07:14:13 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>release_year</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[release_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2618</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>movie_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[movie_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>movie_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3422</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>timestamp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>timestamp</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48125</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3372</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>482</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>video_release_date</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[video_release_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>video_release_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>imdb_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[imdb_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>imdb_url</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3372</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unknown</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[unknown]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unknown</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Action</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Action]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Action</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Adventure</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Adventure]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Adventure</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Animation</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Animation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Animation</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Children</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Children]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Children</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Comedy</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Comedy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Comedy</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Crime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Crime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Crime</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Documentary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Documentary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Documentary</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Drama</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Drama]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Drama</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fantasy</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Fantasy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fantasy</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Film-Noir</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Film-Noir]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Film-Noir</remote-alias>
+              <ordinal>19</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Horror</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Horror]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Horror</remote-alias>
+              <ordinal>20</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Musical</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Musical]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Musical</remote-alias>
+              <ordinal>21</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mystery</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mystery]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mystery</remote-alias>
+              <ordinal>22</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Romance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Romance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Romance</remote-alias>
+              <ordinal>23</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sci-Fi</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Sci-Fi]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sci-Fi</remote-alias>
+              <ordinal>24</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Thriller</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Thriller]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Thriller</remote-alias>
+              <ordinal>25</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>War</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[War]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>War</remote-alias>
+              <ordinal>26</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Western</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Western]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Western</remote-alias>
+              <ordinal>27</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>28</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>108</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>29</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>occupation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[occupation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>occupation</remote-alias>
+              <ordinal>30</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zip_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zip_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zip_code</remote-alias>
+              <ordinal>31</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2138</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genres</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>genres</remote-alias>
+              <ordinal>32</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>477</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[rating_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating_date</remote-alias>
+              <ordinal>33</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>48125</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cinescope_master.csv' id='cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3'>
+            <properties context=''>
+              <relation connection='textscan.1fidhv3010dj0w19pqtds03ccn6y' name='cinescope_master.csv' table='[cinescope_master#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=';'>
+                  <column datatype='real' name='release_year' ordinal='0' />
+                  <column datatype='integer' name='user_id' ordinal='1' />
+                  <column datatype='integer' name='movie_id' ordinal='2' />
+                  <column datatype='integer' name='rating' ordinal='3' />
+                  <column datatype='integer' name='timestamp' ordinal='4' />
+                  <column datatype='string' name='title' ordinal='5' />
+                  <column datatype='date' name='release_date' ordinal='6' />
+                  <column datatype='string' name='video_release_date' ordinal='7' />
+                  <column datatype='string' name='imdb_url' ordinal='8' />
+                  <column datatype='integer' name='unknown' ordinal='9' />
+                  <column datatype='integer' name='Action' ordinal='10' />
+                  <column datatype='integer' name='Adventure' ordinal='11' />
+                  <column datatype='integer' name='Animation' ordinal='12' />
+                  <column datatype='integer' name='Children' ordinal='13' />
+                  <column datatype='integer' name='Comedy' ordinal='14' />
+                  <column datatype='integer' name='Crime' ordinal='15' />
+                  <column datatype='integer' name='Documentary' ordinal='16' />
+                  <column datatype='integer' name='Drama' ordinal='17' />
+                  <column datatype='integer' name='Fantasy' ordinal='18' />
+                  <column datatype='integer' name='Film-Noir' ordinal='19' />
+                  <column datatype='integer' name='Horror' ordinal='20' />
+                  <column datatype='integer' name='Musical' ordinal='21' />
+                  <column datatype='integer' name='Mystery' ordinal='22' />
+                  <column datatype='integer' name='Romance' ordinal='23' />
+                  <column datatype='integer' name='Sci-Fi' ordinal='24' />
+                  <column datatype='integer' name='Thriller' ordinal='25' />
+                  <column datatype='integer' name='War' ordinal='26' />
+                  <column datatype='integer' name='Western' ordinal='27' />
+                  <column datatype='integer' name='age' ordinal='28' />
+                  <column datatype='string' name='gender' ordinal='29' />
+                  <column datatype='string' name='occupation' ordinal='30' />
+                  <column datatype='integer' name='zip_code' ordinal='31' />
+                  <column datatype='string' name='genres' ordinal='32' />
+                  <column datatype='datetime' name='rating_date' ordinal='33' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='cinescope_master (copy)' inline='true' name='federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cinescope_master' name='textscan.1fidhv3010dj0w19pqtds03ccn6y (copy)'>
+            <connection class='textscan' directory='C:/Users/sruja/OneDrive/Desktop/CineScope/Dataset/Processed' filename='cinescope_master.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Action]' />
+            <value name='[Adventure]' />
+            <value name='[Animation]' />
+            <value name='[Children]' />
+            <value name='[Comedy]' />
+            <value name='[Crime]' />
+            <value name='[Documentary]' />
+            <value name='[Drama]' />
+            <value name='[Fantasy]' />
+            <value name='[Film-Noir]' />
+            <value name='[Horror]' />
+            <value name='[Musical]' />
+            <value name='[Mystery]' />
+            <value name='[Romance]' />
+            <value name='[Sci-Fi]' />
+            <value name='[Thriller]' />
+            <value name='[War]' />
+            <value name='[Western]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[cinescope_master.csv].[Action]' />
+              <field name='[cinescope_master.csv].[Adventure]' />
+              <field name='[cinescope_master.csv].[Animation]' />
+              <field name='[cinescope_master.csv].[Children]' />
+              <field name='[cinescope_master.csv].[Comedy]' />
+              <field name='[cinescope_master.csv].[Crime]' />
+              <field name='[cinescope_master.csv].[Documentary]' />
+              <field name='[cinescope_master.csv].[Drama]' />
+              <field name='[cinescope_master.csv].[Fantasy]' />
+              <field name='[cinescope_master.csv].[Film-Noir]' />
+              <field name='[cinescope_master.csv].[Horror]' />
+              <field name='[cinescope_master.csv].[Musical]' />
+              <field name='[cinescope_master.csv].[Mystery]' />
+              <field name='[cinescope_master.csv].[Romance]' />
+              <field name='[cinescope_master.csv].[Sci-Fi]' />
+              <field name='[cinescope_master.csv].[Thriller]' />
+              <field name='[cinescope_master.csv].[War]' />
+              <field name='[cinescope_master.csv].[Western]' />
+            </group>
+          </groups>
+          <relation connection='textscan.1fidhv3010dj0w19pqtds03ccn6y (copy)' name='cinescope_master.csv' table='[cinescope_master#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=';'>
+              <column datatype='real' name='release_year' ordinal='0' />
+              <column datatype='integer' name='user_id' ordinal='1' />
+              <column datatype='integer' name='movie_id' ordinal='2' />
+              <column datatype='integer' name='rating' ordinal='3' />
+              <column datatype='integer' name='timestamp' ordinal='4' />
+              <column datatype='string' name='title' ordinal='5' />
+              <column datatype='date' name='release_date' ordinal='6' />
+              <column datatype='string' name='video_release_date' ordinal='7' />
+              <column datatype='string' name='imdb_url' ordinal='8' />
+              <column datatype='integer' name='unknown' ordinal='9' />
+              <column datatype='integer' name='Action' ordinal='10' />
+              <column datatype='integer' name='Adventure' ordinal='11' />
+              <column datatype='integer' name='Animation' ordinal='12' />
+              <column datatype='integer' name='Children' ordinal='13' />
+              <column datatype='integer' name='Comedy' ordinal='14' />
+              <column datatype='integer' name='Crime' ordinal='15' />
+              <column datatype='integer' name='Documentary' ordinal='16' />
+              <column datatype='integer' name='Drama' ordinal='17' />
+              <column datatype='integer' name='Fantasy' ordinal='18' />
+              <column datatype='integer' name='Film-Noir' ordinal='19' />
+              <column datatype='integer' name='Horror' ordinal='20' />
+              <column datatype='integer' name='Musical' ordinal='21' />
+              <column datatype='integer' name='Mystery' ordinal='22' />
+              <column datatype='integer' name='Romance' ordinal='23' />
+              <column datatype='integer' name='Sci-Fi' ordinal='24' />
+              <column datatype='integer' name='Thriller' ordinal='25' />
+              <column datatype='integer' name='War' ordinal='26' />
+              <column datatype='integer' name='Western' ordinal='27' />
+              <column datatype='integer' name='age' ordinal='28' />
+              <column datatype='string' name='gender' ordinal='29' />
+              <column datatype='string' name='occupation' ordinal='30' />
+              <column datatype='integer' name='zip_code' ordinal='31' />
+              <column datatype='string' name='genres' ordinal='32' />
+              <column datatype='datetime' name='rating_date' ordinal='33' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[movie_id]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>movie_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>video_release_date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[video_release_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>video_release_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>imdb_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[imdb_url]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>imdb_url</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unknown]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>unknown</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>occupation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[occupation]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>occupation</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip_code]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>zip_code</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[rating_date]</local-name>
+            <parent-name>[cinescope_master.csv]</parent-name>
+            <remote-alias>rating_date</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[Pivot Field Values]' role='dimension' type='ordinal' />
+      <column aggregation='None' caption='Rating (bin)' datatype='integer' name='[Rating (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[rating]' peg='0' size='0.5' />
+      </column>
+      <column caption='cinescope_master.csv' datatype='table' name='[__tableau_internal_object_id__].[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Imdb Url' datatype='string' name='[imdb_url]' role='dimension' type='nominal' />
+      <column caption='Movie Id' datatype='integer' name='[movie_id]' role='dimension' type='ordinal' />
+      <column caption='Occupation' datatype='string' name='[occupation]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Timestamp' datatype='integer' name='[timestamp]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Unknown' datatype='integer' name='[unknown]' role='measure' type='quantitative' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column caption='Video Release Date' datatype='string' name='[video_release_date]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Zip Code' datatype='integer' default-format='*00000' name='[zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <group caption='Action (Gender)' hidden='true' name='[Action (Gender)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[gender]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0gf60qh0h58ta216f01ag16zmwrs.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/20/2026 07:49:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>release_year</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[release_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1904</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>movie_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[movie_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>movie_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4056</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>timestamp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>timestamp</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>209907</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4002</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>402</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>video_release_date</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[video_release_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>video_release_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>imdb_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[imdb_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>imdb_url</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4002</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unknown</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[unknown]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>unknown</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>occupation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[occupation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>occupation</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zip_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zip_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zip_code</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1546</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genres</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>genres</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>320</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[rating_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating_date</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cinescope_master.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>209907</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Pivot</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cinescope_master.csv' id='cinescope_master.csv_BEEB175A8DCB480D9E84B1C7679C40C3'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='integer' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Action]' />
+                  <value name='[Adventure]' />
+                  <value name='[Animation]' />
+                  <value name='[Children]' />
+                  <value name='[Comedy]' />
+                  <value name='[Crime]' />
+                  <value name='[Documentary]' />
+                  <value name='[Drama]' />
+                  <value name='[Fantasy]' />
+                  <value name='[Film-Noir]' />
+                  <value name='[Horror]' />
+                  <value name='[Musical]' />
+                  <value name='[Mystery]' />
+                  <value name='[Romance]' />
+                  <value name='[Sci-Fi]' />
+                  <value name='[Thriller]' />
+                  <value name='[War]' />
+                  <value name='[Western]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[cinescope_master.csv].[Action]' />
+                    <field name='[cinescope_master.csv].[Adventure]' />
+                    <field name='[cinescope_master.csv].[Animation]' />
+                    <field name='[cinescope_master.csv].[Children]' />
+                    <field name='[cinescope_master.csv].[Comedy]' />
+                    <field name='[cinescope_master.csv].[Crime]' />
+                    <field name='[cinescope_master.csv].[Documentary]' />
+                    <field name='[cinescope_master.csv].[Drama]' />
+                    <field name='[cinescope_master.csv].[Fantasy]' />
+                    <field name='[cinescope_master.csv].[Film-Noir]' />
+                    <field name='[cinescope_master.csv].[Horror]' />
+                    <field name='[cinescope_master.csv].[Musical]' />
+                    <field name='[cinescope_master.csv].[Mystery]' />
+                    <field name='[cinescope_master.csv].[Romance]' />
+                    <field name='[cinescope_master.csv].[Sci-Fi]' />
+                    <field name='[cinescope_master.csv].[Thriller]' />
+                    <field name='[cinescope_master.csv].[War]' />
+                    <field name='[cinescope_master.csv].[Western]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.1fidhv3010dj0w19pqtds03ccn6y (copy)' name='cinescope_master.csv' table='[cinescope_master#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN' separator=';'>
+                    <column datatype='real' name='release_year' ordinal='0' />
+                    <column datatype='integer' name='user_id' ordinal='1' />
+                    <column datatype='integer' name='movie_id' ordinal='2' />
+                    <column datatype='integer' name='rating' ordinal='3' />
+                    <column datatype='integer' name='timestamp' ordinal='4' />
+                    <column datatype='string' name='title' ordinal='5' />
+                    <column datatype='date' name='release_date' ordinal='6' />
+                    <column datatype='string' name='video_release_date' ordinal='7' />
+                    <column datatype='string' name='imdb_url' ordinal='8' />
+                    <column datatype='integer' name='unknown' ordinal='9' />
+                    <column datatype='integer' name='Action' ordinal='10' />
+                    <column datatype='integer' name='Adventure' ordinal='11' />
+                    <column datatype='integer' name='Animation' ordinal='12' />
+                    <column datatype='integer' name='Children' ordinal='13' />
+                    <column datatype='integer' name='Comedy' ordinal='14' />
+                    <column datatype='integer' name='Crime' ordinal='15' />
+                    <column datatype='integer' name='Documentary' ordinal='16' />
+                    <column datatype='integer' name='Drama' ordinal='17' />
+                    <column datatype='integer' name='Fantasy' ordinal='18' />
+                    <column datatype='integer' name='Film-Noir' ordinal='19' />
+                    <column datatype='integer' name='Horror' ordinal='20' />
+                    <column datatype='integer' name='Musical' ordinal='21' />
+                    <column datatype='integer' name='Mystery' ordinal='22' />
+                    <column datatype='integer' name='Romance' ordinal='23' />
+                    <column datatype='integer' name='Sci-Fi' ordinal='24' />
+                    <column datatype='integer' name='Thriller' ordinal='25' />
+                    <column datatype='integer' name='War' ordinal='26' />
+                    <column datatype='integer' name='Western' ordinal='27' />
+                    <column datatype='integer' name='age' ordinal='28' />
+                    <column datatype='string' name='gender' ordinal='29' />
+                    <column datatype='string' name='occupation' ordinal='30' />
+                    <column datatype='integer' name='zip_code' ordinal='31' />
+                    <column datatype='string' name='genres' ordinal='32' />
+                    <column datatype='datetime' name='rating_date' ordinal='33' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+      <datasources>
+        <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+        <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+          <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+        </column>
+        <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+        <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+        <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+        <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+        <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]'>
+        <groupfilter function='level-members' level='[none:Age (bin):ok]' />
+      </filter>
+      <filter class='categorical' column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]'>
+        <groupfilter function='level-members' level='[none:gender:nk]' />
+      </filter>
+      <filter class='quantitative' column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]' included-values='in-range' />
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Average Rating by Gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Avg' name='[avg:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[avg:rating:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</cols>
+      </table>
+      <simple-id uuid='{11DF89C1-4AFB-4824-B64D-FA23983AC7FC}' />
+    </worksheet>
+    <worksheet name='Average Rating by Genre'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master (copy)' name='federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)'>
+            <column datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' name='[Pivot Field Values]' role='dimension' type='ordinal' />
+            <column-instance column='[rating]' derivation='Avg' name='[avg:rating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values]' derivation='None' name='[none:Pivot Field Values:ok]' pivot='key' type='ordinal' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)].[none:Pivot Field Names:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)].[avg:rating:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)].[none:Pivot Field Values:ok] / [federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)].[none:Pivot Field Names:nk])</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7 (copy)].[avg:rating:qk]</cols>
+      </table>
+      <simple-id uuid='{94B385CD-CEC0-4B51-BE9B-1DC0B370454D}' />
+    </worksheet>
+    <worksheet name='Genre Popularity Analysis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column datatype='integer' name='[Action]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Adventure]' role='measure' type='quantitative' />
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column datatype='integer' name='[Animation]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Children]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Comedy]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Crime]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Documentary]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Drama]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Fantasy]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Film-Noir]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Horror]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Musical]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Mystery]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Romance]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Sci-Fi]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Thriller]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[War]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Western]' role='measure' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+            <column-instance column='[Action]' derivation='Sum' name='[sum:Action:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Adventure]' derivation='Sum' name='[sum:Adventure:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Animation]' derivation='Sum' name='[sum:Animation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Children]' derivation='Sum' name='[sum:Children:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Comedy]' derivation='Sum' name='[sum:Comedy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Crime]' derivation='Sum' name='[sum:Crime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Documentary]' derivation='Sum' name='[sum:Documentary:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Drama]' derivation='Sum' name='[sum:Drama:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Fantasy]' derivation='Sum' name='[sum:Fantasy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Film-Noir]' derivation='Sum' name='[sum:Film-Noir:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Horror]' derivation='Sum' name='[sum:Horror:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Musical]' derivation='Sum' name='[sum:Musical:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mystery]' derivation='Sum' name='[sum:Mystery:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Romance]' derivation='Sum' name='[sum:Romance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sci-Fi]' derivation='Sum' name='[sum:Sci-Fi:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Thriller]' derivation='Sum' name='[sum:Thriller:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[War]' derivation='Sum' name='[sum:War:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Western]' derivation='Sum' name='[sum:Western:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Action:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Adventure:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Animation:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Children:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Comedy:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Crime:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Documentary:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Drama:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Fantasy:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Film-Noir:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Horror:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Musical:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Mystery:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Romance:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Sci-Fi:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Thriller:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:War:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1nhcafm10b60rg16ydryn1sl1hw7].[sum:Western:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[:Measure Names]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[Multiple Values]' scope='cols' value='Number of Ratings' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[:Measure Names]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{B85BBBCB-B21D-4F8D-B5DC-843605120FD7}' />
+    </worksheet>
+    <worksheet name='Monthly Rating Activity'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Count' name='[cnt:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[rating_date]' derivation='Month' name='[mn:rating_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column datatype='datetime' name='[rating_date]' role='dimension' type='ordinal' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[mn:rating_date:ok]</cols>
+      </table>
+      <simple-id uuid='{730623F5-B1CF-4F80-BA09-B986A7858A47}' />
+    </worksheet>
+    <worksheet name='Movie Rating Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Rating (bin)' datatype='integer' name='[Rating (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[rating]' peg='0' size='0.5' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Count' name='[cnt:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Rating (bin)]' derivation='None' name='[none:Rating (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Rating (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[Action (bin)]</column>
+          <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[Rating (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{B1081190-1740-4574-BE5C-39A5EE0DC33F}' />
+    </worksheet>
+    <worksheet name='Movie Ratings by User Occupation'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Count' name='[cnt:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[occupation]' derivation='None' name='[none:occupation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Occupation' datatype='string' name='[occupation]' role='dimension' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:occupation:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:occupation:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:occupation:nk]</cols>
+      </table>
+      <simple-id uuid='{7AEF2DFC-94BD-4A4A-99BD-7EF71D10084C}' />
+    </worksheet>
+    <worksheet name='Movie Releases Over the Years'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[title]' derivation='CountD' name='[ctd:title:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[ctd:title:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</cols>
+      </table>
+      <simple-id uuid='{F18CDAD7-CB0D-46AD-9F5D-3D4C678FA1F3}' />
+    </worksheet>
+    <worksheet name='Top 10 Highest Rated Movies'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Avg' name='[avg:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:title:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[avg:rating:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:title:nk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[avg:rating:qk]</cols>
+      </table>
+      <simple-id uuid='{BD74C20F-A051-433C-BCE1-5CB0EE264DD2}' />
+    </worksheet>
+    <worksheet name='Top 10 Most Rated Movies'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Count' name='[cnt:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:title:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:title:nk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]</cols>
+      </table>
+      <simple-id uuid='{2BDCC15F-1465-404B-9F31-616C2FD5196D}' />
+    </worksheet>
+    <worksheet name='User Age Group Analysis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+            <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[rating]' derivation='Count' name='[cnt:rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]</column>
+            <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[cnt:rating:qk]</rows>
+        <cols>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1nhcafm10b60rg16ydryn1sl1hw7].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{77735EB3-B2A9-40B4-8551-E9FFF9E2E196}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <datasources>
+        <datasource caption='cinescope_master' name='federated.1nhcafm10b60rg16ydryn1sl1hw7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1nhcafm10b60rg16ydryn1sl1hw7'>
+        <column caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+          <calculation class='bin' decimals='1' formula='[age]' peg='0' size='10' />
+        </column>
+        <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+        <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+        <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+        <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+        <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94362' id='17' param='horz' type-v2='layout-flow' w='97538' x='1231' y='4698'>
+            <zone h='94362' id='15' type-v2='layout-basic' w='83076' x='1231' y='4698'>
+              <zone h='28555' id='5' name='Movie Rating Distribution' w='18767' x='1231' y='4698'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25147' id='6' name='Genre Popularity Analysis' w='41542' x='42765' y='49937'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25147' id='7' name='Average Rating by Genre' w='41534' x='1231' y='49937'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28555' id='8' name='Average Rating by Gender' w='20770' x='42765' y='4698'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16684' id='10' name='Monthly Rating Activity' w='41534' x='1231' y='33253'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28555' id='11' name='User Age Group Analysis' w='20772' x='63535' y='4698'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16684' id='12' name='Movie Releases Over the Years' w='41542' x='42765' y='33253'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28555' id='13' name='Movie Ratings by User Occupation' w='22767' x='19998' y='4698'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='23976' id='14' name='Top 10 Highest Rated Movies' w='41542' x='42765' y='75084'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='23976' id='9' name='Top 10 Most Rated Movies' w='41534' x='1231' y='75084'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='94' h='94362' id='16' is-fixed='true' param='vert' type-v2='layout-flow' w='14462' x='84307' y='4698'>
+              <zone h='12338' id='18' name='Average Rating by Gender' param='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:gender:nk]' type-v2='filter' values='database' w='14462' x='84307' y='4698'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='28555' id='19' name='User Age Group Analysis' param='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:Age (bin):ok]' type-v2='filter' values='database' w='14462' x='84307' y='17036'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8578' id='20' name='Movie Releases Over the Years' param='[federated.1nhcafm10b60rg16ydryn1sl1hw7].[none:release_year:qk]' type-v2='filter' values='database' w='14462' x='84307' y='45591'>
+                <zone-style>
+                  <format attr='border-color' value='#444444' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='3758' id='3' type-v2='text' w='97538' x='1231' y='940'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>CINESCOPE – MOVIE ANALYTICS DASHBOARD</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#444444' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#444444' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#444444' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6D25E2A4-DB68-43D5-A1BA-4936AD515626}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='63'>
+    <window class='worksheet' name='Movie Rating Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F814280A-F2CF-4D8B-9266-AE9952D8FE3B}' />
+    </window>
+    <window class='worksheet' name='Genre Popularity Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{67CADB97-236A-454A-BAAF-84FD39F15B37}' />
+    </window>
+    <window class='worksheet' name='Average Rating by Genre'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F47B9183-6036-4B0A-BB9E-353A2CA78886}' />
+    </window>
+    <window class='worksheet' name='Average Rating by Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F1B608E5-FE7D-4C80-9F7D-EE36CE5A9609}' />
+    </window>
+    <window class='worksheet' name='Top 10 Most Rated Movies'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C5487994-96A3-489D-80C1-9E5C5E327CA7}' />
+    </window>
+    <window class='worksheet' name='Monthly Rating Activity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{73A3C04E-4B2F-4896-89C0-F6E4431EA29C}' />
+    </window>
+    <window class='worksheet' name='User Age Group Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C92E837B-3013-45B9-B14A-CD422E2C9F3C}' />
+    </window>
+    <window class='worksheet' name='Movie Releases Over the Years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9CACA167-59F9-40AE-AAA7-4FE3C2A1060F}' />
+    </window>
+    <window class='worksheet' name='Movie Ratings by User Occupation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2C86A844-E74D-4815-A0BD-1119AF274928}' />
+    </window>
+    <window class='worksheet' name='Top 10 Highest Rated Movies'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{946507C4-ED9A-4D39-9DDD-9D5153CA8AEA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Average Rating by Gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Rating by Genre' />
+        <viewpoint name='Genre Popularity Analysis' />
+        <viewpoint name='Monthly Rating Activity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Movie Rating Distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Movie Ratings by User Occupation'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Movie Releases Over the Years'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Highest Rated Movies' />
+        <viewpoint name='Top 10 Most Rated Movies' />
+        <viewpoint name='User Age Group Analysis'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{19248759-14B9-402B-9F83-2B34D33E2C95}' />
+    </window>
+  </windows>
+</workbook>
