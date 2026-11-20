@@ -7,3 +7,12 @@ Data_Mining/KNIME/
 *.dll
 *.exe
 *.zip
+
+# Removed data mining tools
+Data_Mining/KNIME/
+Data_Mining/Orange/
+Data_Mining/RapidMiner/
+
+# Local backup and temporary analysis files
+Dataset/Processed/cinescope_master_backup.csv
+analytics_code.txt

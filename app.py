@@ -794,6 +794,83 @@ def analytics():
     ].nunique()
 
     # --------------------------------------
+    # FASTCLUSTER RESULTS (OPTIONAL)
+    # --------------------------------------
+
+    fastcluster_root = os.path.join(
+        BASE_DIR, "Data_Mining", "Fastcluster"
+    )
+
+    def find_fastcluster_file(filename):
+        if not os.path.isdir(fastcluster_root):
+            return None
+        for root, _, files in os.walk(fastcluster_root):
+            if filename in files:
+                return os.path.join(root, filename)
+        return None
+
+    fastcluster_metrics = []
+    fastcluster_profiles = []
+    fastcluster_genres = []
+
+    metrics_file = find_fastcluster_file(
+        "fastcluster_evaluation_metrics.csv"
+    )
+    profiles_file = find_fastcluster_file(
+        "fastcluster_cluster_profiles.csv"
+    )
+    genres_file = find_fastcluster_file(
+        "fastcluster_genre_profiles.csv"
+    )
+
+    try:
+        if metrics_file:
+            metrics_data = pd.read_csv(metrics_file)
+            fastcluster_metrics = metrics_data.fillna("").to_dict("records")
+    except (OSError, pd.errors.ParserError, UnicodeDecodeError):
+        fastcluster_metrics = []
+
+    try:
+        if profiles_file:
+            profiles_data = pd.read_csv(profiles_file)
+            # The cluster number may be saved as the CSV index.
+            if "cluster" not in profiles_data.columns:
+                first_col = profiles_data.columns[0]
+                if str(first_col).lower().startswith("unnamed"):
+                    profiles_data = profiles_data.rename(
+                        columns={first_col: "cluster"}
+                    )
+            fastcluster_profiles = profiles_data.fillna("").to_dict("records")
+    except (OSError, pd.errors.ParserError, UnicodeDecodeError):
+        fastcluster_profiles = []
+
+    try:
+        if genres_file:
+            genres_data = pd.read_csv(genres_file)
+            if "cluster" not in genres_data.columns:
+                first_col = genres_data.columns[0]
+                if str(first_col).lower().startswith("unnamed"):
+                    genres_data = genres_data.rename(
+                        columns={first_col: "cluster"}
+                    )
+            fastcluster_genres = genres_data.fillna("").to_dict("records")
+    except (OSError, pd.errors.ParserError, UnicodeDecodeError):
+        fastcluster_genres = []
+
+    fastcluster_chart_dir = os.path.join(
+        BASE_DIR, "static", "images", "analytics", "Fastcluster"
+    )
+    fastcluster_chart_names = [
+        "fastcluster_dendrogram.png",
+        "fastcluster_cluster_distribution.png",
+        "fastcluster_genre_profiles.png"
+    ]
+    fastcluster_charts = [
+        name for name in fastcluster_chart_names
+        if os.path.exists(os.path.join(fastcluster_chart_dir, name))
+    ]
+
+    # --------------------------------------
     # RENDER ANALYTICS PAGE
     # --------------------------------------
 
@@ -835,7 +912,13 @@ def analytics():
 
         total_ratings=total_ratings,
 
-        total_users=total_users
+        total_users=total_users,
+
+        # Fastcluster analysis (kept separate from WEKA)
+        fastcluster_metrics=fastcluster_metrics,
+        fastcluster_profiles=fastcluster_profiles,
+        fastcluster_genres=fastcluster_genres,
+        fastcluster_charts=fastcluster_charts
 
     )
 

@@ -558,6 +558,154 @@ new Chart(document.getElementById("genderChart"), {
 
 
 <!-- ==========================================
+     FASTCLUSTER HIERARCHICAL CLUSTERING
+========================================== -->
+
+<section class="weka-section" id="fastcluster">
+
+    <div class="weka-heading">
+        <span class="weka-tag">FASTCLUSTER • HIERARCHICAL MACHINE LEARNING</span>
+        <h2>Fastcluster Analysis</h2>
+        <p>Hierarchical grouping of movies using genre, rating, popularity and release-year features.</p>
+    </div>
+
+    <div class="weka-summary-grid clustering-summary">
+        <div class="weka-summary-card highlight">
+            <h3>Fastcluster</h3>
+            <div class="weka-value">Ward</div>
+            <p>Linkage Method</p>
+            <span>Euclidean Distance</span>
+        </div>
+        <div class="weka-summary-card">
+            <h3>Movie-Level</h3>
+            <div class="weka-value">1,682</div>
+            <p>Movies Analysed</p>
+            <span>MovieLens 100K dataset</span>
+        </div>
+        <div class="weka-summary-card">
+            <h3>Selected Solution</h3>
+            <div class="weka-value">2</div>
+            <p>Clusters</p>
+            <span>Highest silhouette among k = 2–8 tested</span>
+        </div>
+    </div>
+
+    <div class="weka-subheading">
+        <h3>Clustering Evaluation</h3>
+        <p>Internal validation metrics for the selected hierarchical clustering solution.</p>
+    </div>
+
+    {% if fastcluster_metrics %}
+    <div class="weka-table-wrapper">
+        <table class="weka-table">
+            <thead><tr><th>Metric</th><th>Score</th></tr></thead>
+            <tbody>
+                {% for row in fastcluster_metrics %}
+                <tr>
+                    <td>{{ row.get('Metric', '') }}</td>
+                    <td>{{ row.get('Score', '') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p>Fastcluster evaluation metrics CSV was not found. Place fastcluster_evaluation_metrics.csv inside Data_Mining/Fastcluster.</p>
+    {% endif %}
+
+    <div class="weka-subheading">
+        <h3>Cluster Profiles</h3>
+        <p>Average rating, rating volume and release-year characteristics of each cluster.</p>
+    </div>
+
+    {% if fastcluster_profiles %}
+    <div class="weka-table-wrapper">
+        <table class="weka-table">
+            <thead>
+                <tr>
+                    {% for key in fastcluster_profiles[0].keys() %}
+                    <th>{{ key.replace('_', ' ') | title }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in fastcluster_profiles %}
+                <tr>
+                    {% for value in row.values() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p>Fastcluster cluster profile CSV was not found. Place fastcluster_cluster_profiles.csv inside Data_Mining/Fastcluster.</p>
+    {% endif %}
+
+    <div class="weka-subheading">
+        <h3>Fastcluster Visualizations</h3>
+        <p>Dendrogram, cluster-size distribution and genre composition.</p>
+    </div>
+
+    {% if fastcluster_charts %}
+    <div class="weka-chart-grid">
+        {% for chart in fastcluster_charts %}
+        <div class="weka-chart-card {% if chart == 'fastcluster_dendrogram.png' %}weka-chart-wide{% endif %}">
+            <h4>
+                {% if chart == 'fastcluster_dendrogram.png' %}Hierarchical Dendrogram
+                {% elif chart == 'fastcluster_cluster_distribution.png' %}Movie Distribution by Cluster
+                {% else %}Genre Profiles by Cluster{% endif %}
+            </h4>
+            <img src="{{ url_for('static', filename='images/analytics/Fastcluster/' + chart) }}"
+                 alt="{{ chart.replace('_', ' ').replace('.png', '') }}">
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Fastcluster chart images have not been placed in static/images/analytics/Fastcluster yet.</p>
+    {% endif %}
+
+    {% if fastcluster_genres %}
+    <div class="weka-subheading">
+        <h3>Genre Composition Data</h3>
+        <p>Genre proportions for each cluster (values range from 0 to 1).</p>
+    </div>
+    <div class="weka-table-wrapper">
+        <table class="weka-table">
+            <thead>
+                <tr>
+                    {% for key in fastcluster_genres[0].keys() %}
+                    <th>{{ key.replace('_', ' ') | title }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in fastcluster_genres %}
+                <tr>
+                    {% for value in row.values() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <div class="weka-findings">
+        <h3>Fastcluster Findings</h3>
+        <ul>
+            <li>Ward's hierarchical method was applied using Euclidean distance on standardized movie features.</li>
+            <li>Two clusters produced the highest silhouette score among the tested solutions from two to eight clusters.</li>
+            <li>The two-cluster result is the best-scoring tested configuration; its practical usefulness should be judged from the cluster profiles and genre composition.</li>
+        </ul>
+    </div>
+
+</section>
+
+
+<!-- ==========================================
      OVERALL RESEARCH CONCLUSION
 ========================================== -->
 

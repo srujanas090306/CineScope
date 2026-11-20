@@ -1,0 +1,44 @@
+
+CINESCOPE - FASTCLUSTER HIERARCHICAL CLUSTERING REPORT
+
+1. OBJECTIVE
+To group movies based on genre, average rating, popularity,
+and release year using hierarchical clustering.
+
+2. DATASET
+Dataset: MovieLens 100K
+Total ratings: 100000
+Unique movies: 1682
+Features used: 21
+
+3. PREPROCESSING
+- Aggregated ratings at movie level.
+- Extracted movie genres.
+- Handled missing release years using median imputation.
+- Applied log transformation to rating counts.
+- Standardized numerical features using StandardScaler.
+
+4. ALGORITHM
+Algorithm: Hierarchical Agglomerative Clustering
+Implementation: Fastcluster
+Linkage: Ward
+Distance: Euclidean
+Optimal clusters tested: 2 to 8
+Selected clusters: 2
+
+5. EVALUATION
+                 Metric      Score
+       Silhouette Score   0.381248
+Calinski-Harabasz Index 121.293083
+   Davies-Bouldin Index   2.088852
+
+6. CLUSTER PROFILES
+         movie_count  average_rating  average_rating_count  average_release_year
+cluster                                                                         
+1                101            3.26                 78.59               1981.01
+2               1581            3.06                 58.23               1989.92
+
+7. CONCLUSION
+Fastcluster successfully grouped 1682 movies
+into 2 clusters using hierarchical clustering.
+The evaluation metrics help assess the quality of the resulting groups.
