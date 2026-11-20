@@ -15,8 +15,7 @@ print("Loading CineScope Hybrid Recommendation Model...")
 
 
 # Load dataset
-df = pd.read_csv(DATASET_PATH)
-
+df = pd.read_csv(DATASET_PATH, sep=";", encoding="cp1252")
 
 # Movie information
 movies = (

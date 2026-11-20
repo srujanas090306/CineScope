@@ -263,8 +263,7 @@ if not os.path.exists(DATASET_PATH):
         "Run prepare_dataset.py first."
     )
 
-df = pd.read_csv(DATASET_PATH)
-
+df = pd.read_csv(DATASET_PATH, sep=";", encoding="cp1252")
 
 # ==========================================
 # PREPARE MOVIE INFORMATION
