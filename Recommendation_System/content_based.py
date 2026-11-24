@@ -8,8 +8,12 @@ print("       CINESCOPE - CONTENT BASED RECOMMENDATION")
 print("=" * 60)
 
 # Load dataset
-df = pd.read_csv("Dataset/Processed/cinescope_master.csv")
-
+df = pd.read_csv(
+    "Dataset/Processed/cinescope_master.csv",
+    sep=";",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 # Keep one record per movie
 movies = df.drop_duplicates(
     subset="movie_id"

@@ -263,8 +263,12 @@ if not os.path.exists(DATASET_PATH):
         "Run prepare_dataset.py first."
     )
 
-df = pd.read_csv(DATASET_PATH, sep=";", encoding="cp1252")
-
+df = pd.read_csv(
+    DATASET_PATH,
+    sep=",",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 # ==========================================
 # PREPARE MOVIE INFORMATION
 # ==========================================
@@ -930,6 +934,13 @@ def analytics():
     average_user_rating=round(average_user_rating, 1),
     user_rating_count=user_rating_count
 )
+# ==========================================
+# TABLEAU ANALYTICS
+# ==========================================
+
+@app.route("/tableau-analytics")
+def tableau_analytics():
+    return render_template("tableau_analytics.html")
 # ==========================================
 # RUN APPLICATION
 # ==========================================

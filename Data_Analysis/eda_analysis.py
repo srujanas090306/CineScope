@@ -8,8 +8,12 @@ print("       CINESCOPE - EXPLORATORY DATA ANALYSIS")
 print("=" * 55)
 
 # Load processed dataset
-df = pd.read_csv("Dataset/Processed/cinescope_master.csv")
-
+df = pd.read_csv(
+    "Dataset/Processed/cinescope_master.csv",
+    sep=";",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 # Create output folder
 os.makedirs("Visualizations", exist_ok=True)
 

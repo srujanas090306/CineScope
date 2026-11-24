@@ -15,8 +15,12 @@ print("Loading CineScope Hybrid Recommendation Model...")
 
 
 # Load dataset
-df = pd.read_csv(DATASET_PATH, sep=";", encoding="cp1252")
-
+df = pd.read_csv(
+    DATASET_PATH,
+    sep=",",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 # Movie information
 movies = (
     df.drop_duplicates(subset="movie_id")

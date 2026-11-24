@@ -6,8 +6,12 @@ print("     CINESCOPE - COLLABORATIVE FILTERING")
 print("=" * 60)
 
 # Load dataset
-df = pd.read_csv("Dataset/Processed/cinescope_master.csv")
-
+df = pd.read_csv(
+    "Dataset/Processed/cinescope_master.csv",
+    sep=";",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 # Create user-movie rating matrix
 print("\nCreating user-movie rating matrix...")
 

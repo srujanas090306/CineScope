@@ -1185,3 +1185,50 @@ footer h2 {
 .community-rating-label {
     margin-top: 25px;
 }
+/* TABLEAU ANALYTICS PROMO */
+
+.tableau-promo {
+    margin: 45px auto;
+    max-width: 1200px;
+    padding: 55px 35px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #241a16, #563626);
+    text-align: center;
+    color: white;
+}
+
+.tableau-promo-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.tableau-promo h2 {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.tableau-promo h2 span {
+    color: #e6a77e;
+}
+
+.tableau-promo p {
+    line-height: 1.8;
+    color: #e5d9d2;
+}
+
+.tableau-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 28px;
+    background: #e6a77e;
+    color: #241a16;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.tableau-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}

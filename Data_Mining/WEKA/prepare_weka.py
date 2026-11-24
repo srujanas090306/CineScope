@@ -18,8 +18,12 @@ print("=" * 55)
 
 
 # Load dataset
-df = pd.read_csv(INPUT_FILE)
-
+df = pd.read_csv(
+    INPUT_FILE,
+    sep=";",
+    encoding="cp1252",
+    encoding_errors="replace"
+)
 print("\nOriginal dataset:", df.shape)
 
 
