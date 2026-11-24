@@ -16,3 +16,5 @@ Data_Mining/RapidMiner/
 # Local backup and temporary analysis files
 Dataset/Processed/cinescope_master_backup.csv
 analytics_code.txt
+
+.env
